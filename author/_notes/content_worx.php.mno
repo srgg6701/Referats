@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="MM_css_include" value="../css/style.css,../css/txt.css,../css/padding.css,../css/border.css" />
+	<infoitem key="MM_css_exclude" value="" />
+	<infoitem key="notes" value="При удалении И/ИЛИ отсылке работы отключить запросы актуальности для заказчиков" />
+	<infoitem key="showOnOpen" value="true" />
+	<infoitem key="status" value="needs attention" />
+</info>

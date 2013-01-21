@@ -1,0 +1,26 @@
+typework
+    diploma
+    diplomaMBA
+    course
+    referat
+    dissertation
+section
+    payment
+    faq
+    useful
+    agreement
+    sale
+    set_distributor_link
+    payment
+    partnership
+sort
+    subject
+    typework
+    predmet
+work_id
+article
+    plagiat
+    affair
+    bad_teacher
+    recruits
+    set_distributor_link

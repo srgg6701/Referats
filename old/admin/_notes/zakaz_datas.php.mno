@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="showOnOpen" value="true" />
+	<infoitem key="notes" value="1.Разобраться со статусом кустомера (заказчик или клиент) - прописывать его динамически. То же самое - со статусам заказа/заявки и порядком перечисления статусов, начиная с табл. БД &quot;ri_zakaz_status&quot;&#xD;2.Для чего ещё одна ссылка на параметры работы (в теме работы)?" />
+	<infoitem key="status" value="needs attention" />
+</info>

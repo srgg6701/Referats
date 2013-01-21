@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+<head>
+<script language="JavaScript" type="text/JavaScript">
+myInt=0;
+myTitleSymbol=new Array();
+myTitleSymbol[0]='{|}'; 
+myTitleSymbol[1]='{/}';
+myTitleSymbol[2]='{-}';
+myTitleSymbol[3]='{\\}';
+myTitleSymbol[2]='{-}';
+myTitleSymbol[3]='{\\}';
+myTitleSymbol[4]=myTitleSymbol[0];
+myTitleSymbol[5]=myTitleSymbol[1];
+myTitleSymbol[6]=myTitleSymbol[2];
+myTitleSymbol[7]=myTitleSymbol[3];
+function myFunc() {
+if (myInt>=8) myInt=0;
+document.title=myTitleSymbol[myInt]+' Персональный эккаунт автора';
+myInt++;
+}
+setInterval("myFunc()",300);
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Персональный эккаунт автора</title>
+</head>
+<frameset rows="*" cols="175,*" framespacing="1" frameborder="NO" border="1">
+  <frame src="menu.php" name="topFrame" style="border-right:solid 2px #cccccc">
+  <frame src="home.php" name="mainFrame">
+</frameset>
+<noframes><body>
+</body></noframes>
+</html>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="MM_css_include" value="../css/border.css,../css/padding.css,../css/style.css,../css/txt.css" />
+	<infoitem key="MM_css_exclude" value="" />
+	<infoitem key="notes" value="Добавить опции ответа на сообщение, цитаты, столбец с текстом..." />
+</info>

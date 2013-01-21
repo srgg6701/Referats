@@ -1,0 +1,6 @@
+User-agent:*
+Disallow:/linkzsystem/
+Disallow:/linx1.htm
+Disallow:/linx3.htm
+Disallow:/linx4.htm
+Disallow:/linx_eduserv.htm

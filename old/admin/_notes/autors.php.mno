@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="notes" value="Для корректной раскраски строк при отметке чекбоксов необходимо, чтобы чекбокс.name Чёрного списка был = чекбокс.name Delete +='Black'" />
+	<infoitem key="status" value="needs attention" />
+</info>

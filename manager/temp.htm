@@ -1,0 +1,169 @@
+ <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Аккаунт сотрудника</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+<link href="../css/txt.css" rel="stylesheet" type="text/css">
+<link href="../css/padding.css" rel="stylesheet" type="text/css">
+<link href="../css/border.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../js.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../email_check.js"></script>
+<script type="text/javascript">
+function findOrderById(order_id_cell) {
+var inputOrder=document.getElementById(order_id_cell);
+	if (inputOrder.value=='') alert('Вы не указали id заказа!');
+	else location.href='?menu=money&amp;order_id='+inputOrder.value;
+}
+function findWorkByName(work_name_cell) {
+var inputWork=document.getElementById(work_name_cell);
+	if (inputWork.value=='') alert('Вы не указали тему работы!');
+	else location.href='?menu=worx&amp;work_subject='+inputWork.value;
+}
+function manageSearchCells(cellNameShow,cellNameHide){
+document.getElementById('find_order_row').style.display='block';
+document.getElementById(cellNameShow).style.display='block';
+document.getElementById(cellNameHide).style.display='none';
+}
+</script>
+
+<style>
+body { 
+	overflow:hidden; 
+	padding:0; 
+	margin:0;
+}
+</style>
+</head>
+<body onLoad="if (document.getElementById('test_mode_info')) MM_dragLayer('test_mode_info','',0,0,0,0,true,false,-1,-1,-1,-1,false,false,0,'',false,'');">
+
+<table width="100%" height="100%" align="center" cellpadding="0" cellspacing="0">
+<form name="form1" method="post" class="padding0" enctype="multipart/form-data" onSubmit="return actors.checkSubjectsChecked();">
+    
+  <tr class="borderBottom1 authorTblRowHeader" style="height:auto;">
+    <td colspan="2" align="left" nowrap class="padding6 paddingTop10" id="authorMenu" style="border-bottom-color:#E5E5E5;">        <span><a href="index.php">Главная</a></span>
+    	<span style="padding-right:4px;"><a href="?menu=worx">Работы</a></span><a title="Найти работу..." href="#" 
+onClick="manageSearchCells('fWorkSubj','fOrder');return false;"><img src="http://www.referats.info/images/find.png" width="16" height="16" border="0" align="absmiddle"></a>
+    	<span style="padding-right:4px;"><a href="?menu=orders">Заказы</a></span><a title="Найти заказ..." href="#" 
+onClick="manageSearchCells('fOrder','fWorkSubj');return false;"><img src="http://www.referats.info/images/find.png" width="16" height="16" border="0" align="absmiddle"></a>
+        <span style="padding-right:4px;"><a href="?menu=money">Приход Д/С</a></span><a title="Новая проводка Д/С..." href="?menu=mone&amp;action=add"><img src="http://www.referats.info/images/plus.png" width="16" height="16" border="0" align="absmiddle"></a>
+        <span style="padding-right:4px;"><a href="?menu=payouts">Выплаты</a></span><a title="Новая проводка о выплате..." href="?menu=payout&amp;action=add"><img src="http://www.referats.info/images/plus.png" width="16" height="16" border="0" align="absmiddle"></a>
+        <span class="iborder autorMenuActive" style="padding-right:4px;"><a href="?menu=messages">Сообщения</a></span><a title="Новое сообщение..." href="?menu=messages&amp;action=compose"><img src="http://www.referats.info/images/plus.png" width="16" height="16" border="0" align="absmiddle"></a>
+        <!--<span><a href="?menu=actors">Субъекты</a></span>-->
+        <span><a href="?menu=data">Данные</a></span>
+        <span><a href="?menu=agreements">Соглашения</a></span>
+		<span><a href="?menu=exit">Выход</a></span></td>
+    </tr>
+  <tr style="height:auto; display:none;" id="find_order_row">
+  	<td colspan="2" class="padding4 bgPale">
+    <span id="fOrder" style="display:none;padding-left:180px;"><img src="http://www.referats.info/images/delete_gray.png" width="16" height="16" hspace="4" border="0" align="absmiddle" title="Скрыть поле поиска" onClick="switchDisplay('find_order_row');">Найти заказ id 
+  	  <input id="find_order" name="find_order" type="text" size="2">
+  	  <input type="button" onClick="findOrderById('find_order');" value="Найти!"></span>
+    <span id="fWorkSubj" style="display:none;padding-left:96px;"><img src="http://www.referats.info/images/delete_gray.png" width="16" height="16" hspace="4" border="0" align="absmiddle" title="Скрыть поле поиска" onClick="switchDisplay('find_order_row');">Найти работу по теме 
+  	  <input id="work_subject" name="work_subject" type="text" size="80">
+  	  <input type="button" onClick="findWorkByName('work_subject');" value="Найти!"></span>      </td>
+  </tr>
+  <tr height="100%">
+    <td colspan="2" valign="top" style="border-top:solid 1px #CCC;"><div style="overflow:auto; height:100%;" class="padding8 paddingTop14">
+<table width="100%" height="100%" cellpadding="4" cellspacing="0">
+  <tr>
+	<td width="45%" rowspan="2" valign="top">
+	  <div style="height:100%; overflow:auto">
+		      	
+    <table cellspacing="0" cellpadding="4" width="100%">
+  <tr>
+    <td><h4 class="padding0"><nobr><img src="http://www.referats.info/images/message.png" width="28" height="28" hspace="4" align="absmiddle" />Новое сообщение 
+    
+    <a href="?menu=money&amp;order_id=50">по заказу id 50</a>.</nobr></h4></td>
+    <td align="right" nowrap="nowrap" class="txt90 arial"><a href="?menu=messages"><img src="http://www.referats.info/images/mails.gif" width="15" height="15" hspace="4" border="0" align="absmiddle" />Список сообщений...</a></td>
+  </tr>
+  <tr>
+    <td colspan="2"><textarea class="widthFull iborder2" style="border-color:#99C;" name="send_feedback" rows="10" title="Двойной щелчок увеличит высоту поля;
+						Одиночный щелчок + Ctrl - уменьшит;
+						Двойной + Ctrl - вернёт размер к начальному значению."
+						onClick="if (event.ctrlKey&&this.rows>1) this.rows-=3;"
+						onDblClick="if (event.ctrlKey) this.rows=4; else this.rows+=4"></textarea>
+      	<div class="padding4"><input type="submit" value="Отправить!"></div></td>
+    </tr>
+    </table>
+    </div>
+        <input name="addresses" id="addresses" type="hidden">
+        <input name="receiver_user_type" id="receiver_user_type" type="hidden"></td>
+	<td width="55%" valign="top" nowrap="nowrap" class="padding10 txt100" style="height:auto;">	  <div class="paddingBottom10">
+			<div class="txt100 padding10 iborder borderColorGray bgGrayLightFBFBFB"><img src="http://www.referats.info/images/i_triangle.png" width="15" height="15" vspace="2" align="left" /> Работа id 7922 является собственностью Referats.info.</div>	
+		</div>
+		<div align="center">Тип респондента:&nbsp; 
+        &nbsp; 
+        <a href="content_messages.php?actor=author&amp;user_id=" target="actors"><img src="http://www.referats.info/images/author2.gif" width="16" height="16" hspace="4" border="0" align="absmiddle" /><strong>Автор</strong></a> 
+        &nbsp;
+        <a href="content_messages.php?actor=customer&amp;user_id=16" target="actors"><img src="http://www.referats.info/images/user_small.png" width="13" height="16" hspace="4" border="0" align="absmiddle" /><strong>Заказчик</strong></a>
+        &nbsp;
+        <a href="content_messages.php?actor=workers" target="actors"><img src="http://www.referats.info/images/cooworker.gif" width="16" height="16" hspace="4" border="0" align="absmiddle" /><strong>Сотрудник</strong></a>        
+    </div></td>
+  </tr>
+  <tr>
+	<td height="100%" valign="top"><div class="padding10 paddingTop0">
+        <iframe src="content_messages.php?work_id=7922&" frameborder="0" name="actors" class="iborder2 borderColorGray" style="height:160px; width:90%;"></iframe>
+            
+            </div><div class="padding10 paddingTop0"><h4 class="padding0 paddingLeft4 paddingBottom6 txtGreen"><img src="http://www.referats.info/images/database_table.png" width="32" height="32" align="absmiddle"> Данные:</h4>
+ 		    
+           
+          <table cellspacing="0" cellpadding="0" class="iborder" bordercolor="#CCCCCC" rules="rows">
+  <tr class="bgGrayLightEFEFEF">
+    <th nowrap class="padding4"><img src="http://www.referats.info/images/author2.gif" width="16" height="16" hspace="4" border="0" align="absmiddle" />Автор</th>
+    <th nowrap class="padding4"><img src="http://www.referats.info/images/word2_mini.png" width="21" height="20" hspace="4" align="absmiddle">Работа</th>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#E3FEFF" class="padding10">
+     <h3><nobr><img src="http://www.referats.info/images/document_edit.png" width="32" height="32" align="absmiddle" /><img src="http://www.referats.info/images/document_search.png" width="32" height="32" hspace="2" align="absmiddle" /> Referats.info</nobr></h3></td>
+    <td valign="top" style="border-left:1px solid #CCC;">
+    <table width="100%" cellpadding="4" cellspacing="0">
+      <tr>
+        <td align="right"><strong>Тема</strong></td>
+        <td>Автоматизация складского учёта на предприятии с помощью программы Access&nbsp;</td>
+      </tr>
+      <tr>        
+        <td align="right"><strong>Тип</strong></td>
+        <td>Диплом&nbsp;</td>
+      </tr>
+      <tr>
+        <td align="right"><strong>Предмет</strong></td>
+        <td>Компьютеры, Программирование&nbsp;</td>
+      </tr>
+      <tr>
+        <td align="right"><strong>Цена</strong></td>
+        <td>1475&nbsp;</td>
+      </tr>
+      <tr>        <th colspan="2" align="center" bgcolor="#EAFFEA"><img src="http://www.referats.info/images/basket_middle.png" width="21" height="20" hspace="4" align="absmiddle"><a href="?menu=orders&amp;work_id=7922" title="Загрузить все заказы по работе">Заказы</a> <span class="noBold">(всего: 1)</span></th>
+        </tr>
+      <tr>
+        <td nowrap><strong><img src="http://www.referats.info/images/access_rights.gif" width="16" height="16" hspace="4" border="0" align="absmiddle" />Полностью оплачено</strong></td>
+        <td align="right">0</td>
+      </tr>
+      <tr>
+        <td nowrap><strong><img src="http://www.referats.info/images/money_waiting.gif" width="16" height="15" hspace="4" align="absmiddle">Не оплачено</strong></td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td nowrap><strong><img src="http://www.referats.info/images/ourcost.png" width="16" height="16" hspace="4" border="0" align="absmiddle">К выплате</strong></td>
+        <td align="right">0</td>
+      </tr>
+      <tr>
+        <td nowrap><strong><img src="http://www.referats.info/images/pay_out.png" width="16" height="16" hspace="4" border="0" align="absmiddle">Выплачено</strong></td>
+        <td align="right">0</td>
+      </tr>
+      <tr>
+        <td nowrap><strong><img src="http://www.referats.info/images/salary_ok.png" width="16" height="16" hspace="4" border="0" align="absmiddle">Продано</strong></td>
+        <td align="right">0</td>
+      </tr>
+    </table></td>
+    </tr>
+</table></div></td>
+  </tr>
+</table>
+
+</div></td>
+  </tr>
+</form>
+</table>
+</body>
+</html>

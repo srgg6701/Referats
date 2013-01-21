@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="status" value="needs attention" />
+	<infoitem key="notes" value="1.Сделать многостраничный список&#xD;2.Желательно изменить формат даты - 04 вместо 2004&#xD;3.Писать для юзера пояснение по поводу жёлтой строки. В дальнейшем предусмотреть опцию её сокрытия навсегда :)" />
+	<infoitem key="showOnOpen" value="true" />
+</info>

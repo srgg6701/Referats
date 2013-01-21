@@ -1,0 +1,665 @@
+  
+<html>
+<head>
+<title>Банк рефератов, курсовых, дипломных работ. Готовые работы, дипломы на заказ рефераты</title>
+<meta name="description" content="Банк рефератов, курсовых, дипломных работ. Готовые работы, дипломы на заказ.">
+<meta name="keywords" content="банк рефератов, курсовая, диплом, реферат, курсовые, диплом на заказ, курсовая работа на тему, купить диплом, курсовая по, реферат на тему, менеджмент, право, экологии, экономике, политологии, финансы, педагогика, рефераты и курсовые, психология, коллекция рефератов, социология, дипломная, коллекция рефератов, диссертация, ОБЖ, география, иностранные языки, литература, социология, физика, химия, философия">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<!--<script language="JavaScript" type="text/JavaScript" src="../go_url.js"></script>-->
+<script language="JavaScript" type="text/JavaScript" src="../js.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../email_check.js"></script>
+<script type="text/javascript">
+function searchWork(work_type) {
+	document.getElementById('work_type').value=work_type;
+	document.forms['form1'].action="index.php";
+	document.forms['form1'].submit();
+}
+//загрузить всех текущих юзеров, чтобы выяснить, принадлежит ли кому-нибудь из них указанный емэйл
+var allMails=new Array('serjo@mail.ru','wxas@yandex.ru','dinato@mail.ru','astalavistas@gmail.com','visionnaire@mail.ru');
+
+user_login=0;
+function checkMailExisting(tmail) { 
+	for (i=0;i<allMails.length;i++) {
+		if (allMails[i]==tmail) {
+			document.getElementById('user_pass').style.display='block';
+		 	user_login=tmail;
+		}
+	}
+}
+function checkAllBoxes() {
+var un=0;
+var allBoxes=document.getElementById('tbl_customer').getElementsByTagName('INPUT');
+for (i=1;i<allBoxes.length;i++) if (allBoxes.item(i).checked==true) un++;
+	if (un==0) {
+		alert('Вы не отметили ни одной работы!');
+		return false;
+	}else{
+		document.getElementById('reg_area').style.display='block';
+		return false;
+	}
+}
+
+dg="@";
+realm=".";
+realm+="info";
+var mContent="sale"+dg+"referats"+realm;
+function showFeedBack(fcontent) {
+	var tBlock=document.getElementById('feedbak_container');
+	if (fcontent=="email") fcontent=mContent;
+tBlock.innerHTML=fcontent;
+}
+function sendEmail() {
+	location.href="mailto: "+mContent;
+}
+function callViaSkipe(dSkipe) {
+	location.href="skype:"+dSkipe;
+}
+//добавить запись в поле:
+function addOrderNote(mtype,order_id) {
+var set_subject;
+	switch(mtype) {
+		case "order":
+		set_subject="Сообщение по заказу id "+order_id;
+		document.getElementById('ri_basket_id').value=order_id;
+		break;
+		
+		default: set_subject="Новое сообщение администрации Referats.info.";
+	}
+document.getElementById('comment').value=set_subject+':\n----------------------------------------\n';
+document.getElementById('set_subject').value=set_subject;
+}
+</script>
+<link href="../css/border.css" rel="stylesheet" type="text/css">
+<link href="../css/padding.css" rel="stylesheet" type="text/css">
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+<link href="../css/txt.css" rel="stylesheet" type="text/css">
+</head>
+<body onLoad="if (document.getElementById('test_mode_info')) MM_dragLayer('test_mode_info','',0,0,0,0,true,false,-1,-1,-1,-1,false,false,0,'',false,'');"><table width="100%" cellspacing="0" cellpadding="0">
+  <tr class="borderBottom4 borderColorGray">
+    <td width="25%" height="82" align="center" nowrap bgcolor="#003399" class="padding10"><a href="../index.php" class="txtWhite header"><img src="<?=$_SESSION['SITE_ROOT']?>images/logo_docs.png" alt="Рефераты, курсовые, дипломные работы скачать. Готовые работы, дипломы на заказ рефераты" width="61" height="32" hspace="4" border="0" align="absmiddle">Referats.<span style="color:#ffcc00;">info</span></a></td>
+    <td width="52%" align="center" bgcolor="#FFCC00" class="padding10">
+    <table border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td style="border:none;" class="txt100"><strong>Уникальные готовые творческие работы:</strong></td>
+      </tr>
+      <tr>
+        <td style="border:none;">
+        <h1 class="padding0 noBold txt110 Cambria"><a href="#" onClick="searchWork('Дипломная работа');return false;">Дипломные работы</a>, <a href="#" onClick="searchWork('Диплом MBA');return false;">дипломы MBA</a>, <a href="#" onClick="searchWork('Курсовая');return false;">курсовые работы</a>, <a href="#" onClick="searchWork('Реферат');return false;">рефераты</a> и <a href="#" onClick="searchWork('Диссертация');return false;">диссертации</a>!</h1></td>
+      </tr>
+    </table>      </td>
+    <td width="23%" align="center" bgcolor="#E1E1FF" id="tdConnect">
+    <a href="javascript:callViaSkipe('+79044428447');" title="Звонок на мобильный телефон по скайпу"><img src="<?=$_SESSION['SITE_ROOT']?>images/phone_sound.png" width="32" height="32" border="0" onMouseOver="showFeedBack('+7 904 442 84 47');"></a>
+    <a href="javascript:sendEmail();"><img src="<?=$_SESSION['SITE_ROOT']?>images/message.png" width="28" height="28" border="0" onMouseOver="showFeedBack('email');"></a>
+    <a href="javascript:callViaSkipe('eduservice');" title="Вызов по скайпу"><img src="<?=$_SESSION['SITE_ROOT']?>images/Skype-32.png" width="32" height="32" border="0" onMouseOver="showFeedBack('eduservice');"></a>
+    <a href="javascript:callViaSkipe('29894257');" title="Вызов по icq"><img src="<?=$_SESSION['SITE_ROOT']?>images/licq_32x32.png" width="32" height="32" border="0" onMouseOver="showFeedBack('29894257');"></a>
+    <div class="paddingTop2" id="feedbak_container"><strong class="txtRed">Всегда на связи с Вами!</strong></div>
+    </td>
+  </tr>
+</table>
+<table width="100%" cellspacing="0" cellpadding="10">
+  <tr align="center" class="txt120 borderBottom2 borderColorGray">
+    <td height="55"><a href="../index.php">Выбрать работу</a></td>
+    <td><a href="../?section=payment">Способы оплаты</a></td>
+    <td><a href="../?section=faq">FAQ</a></td>
+    <td><a href="../?article=all">Полезное</a></td>
+    <td><a href="../?section=agreement">Соглашение об услугах</a></td>
+    <td><a href="../?section=authors">Авторам</a></td>
+  </tr>
+</table>
+<!--
+
+входящие переменные:
+
+typework
+	diploma
+    diplomaMBA
+    course
+    referat
+    dissertation
+section
+	payment
+    faq
+    useful
+    agreement
+    sale
+    set_distributor_link
+    payment
+    partnership
+sort
+	subject
+    typework
+    predmet
+work_id
+article
+	plagiat
+    affair
+    bad_teacher
+    recruits
+    set_distributor_link
+find_work
+    work_subject
+    work_type    
+-->
+<table width="100%" cellspacing="0" cellpadding="10">
+<form action="" method="post" name="form1" class="padding0">
+  <tr bgcolor="#E1E1FF">
+    <td height="52" bgcolor="#E1E1FF" class="paddingRight0">            
+    <select name="work_type" style="background-color:#FFFFCC;" class="widthFull" id="work_type">
+      <option value="0" selected>Все типы работ </option>
+		  <option value="Диплом MBA">Диплом MBA</option>				  
+           
+	
+	  <option value="Дипломная работа">Дипломная работа</option>				  
+           
+	
+	  <option value="Диссертация">Диссертация</option>				  
+           
+	
+	  <option value="Исследование">Исследование</option>				  
+           
+	
+	  <option value="Контрольная работа">Контрольная работа</option>				  
+           
+	
+	  <option value="Курсовая">Курсовая</option>				  
+           
+	
+	  <option value="Лабораторная работа">Лабораторная работа</option>				  
+           
+	
+	  <option value="Неизвестный">Неизвестный</option>				  
+           
+	
+	  <option value="Опыт">Опыт</option>				  
+           
+	
+	  <option value="Отработка">Отработка</option>				  
+           
+	
+	  <option value="Преддипломная практика">Преддипломная практика</option>				  
+           
+	
+	  <option value="Производственная практика">Производственная практика</option>				  
+           
+	
+	  <option value="Прочее">Прочее</option>				  
+           
+	
+	  <option value="Реферат">Реферат</option>				  
+           
+	
+	  <option value="мегаЭкспл">мегаЭкспл</option>				  
+           
+	
+	  <option value="Прочее">Прочее</option>
+    </select>
+ </td>
+    <td>
+      <table width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td nowrap class="txt100 paddingLeft4">Укажите тему работы:</td>
+          <td><img src="<?=$_SESSION['SITE_ROOT']?>images/1295963445_search.png" width="16" height="16" hspace="4"></td>
+          <td width="100%"><input style="height:24px;" name="work_subject" type="text" class="widthFull" id="work_subject" value="" title="Оставьте поле пустым, если хотите найти работу по указанному в списке типу предмета на любую тему."></td>
+          <td><input style="height:26px;" type="submit" name="find_work" id="find" value="  Найти!  "></td>
+        </tr>
+      </table> </td>
+    <td align="center" class="bgF4FF"><a href="../?section=register"><strong><img src="<?=$_SESSION['SITE_ROOT']?>images/pay_rest.gif" width="16" height="16" hspace="4" border="0" align="absmiddle">Продать готовую работу...</strong></a></td>
+  </tr>
+</form>  
+  <tr>
+    <td width="15%" valign="top" class="contentColumn borderTop1 borderColorGray"><!--  
+    
+    СМ. СХЕМУ КОМПОНОВКИ БЛОКОВ В Dosc/menu_layout.xls
+    
+    --><!--
+    
+    ЛЕВАЯ КОЛОНКА top
+    
+    --><strong class="txt120"><img src="<?=$_SESSION['SITE_ROOT']?>images/account_apps.gif" width="32" height="32" hspace="2" align="absmiddle">Как получить:</strong>
+
+    
+
+    <ol class="paddingLeft0">
+      <li>Выберите работу</li>
+      <li>Просмотрите её аннотацию</li>
+      <li>Отметьте её для приобретения</li>
+      <li>Оплатите</li>
+      <li>Сообщите нам об оплате</li>
+      <li>Получите готовую работу!</li>
+    </ol>
+
+    
+
+    <div class="paddingTop10 paddingBottom10"><hr noshade></div>
+
+    <!--
+    
+    КОНЕЦ ЛЕВОЙ КОЛОНКИ top
+    
+    --><!--
+	
+    ЛЕВАЯ КОЛОНКА bottom
+	
+	--><!--
+    
+    КОНЕЦ ЛЕВОЙ КОЛОНКИ bottom
+    
+    --><a href="http://lib.2-all.com"><img src="<?=$_SESSION['SITE_ROOT']?>images/logo_social_portal.png" width="188" height="152" vspace="20" border="0"></a>    
+
+    <div class="paddingTop10"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5247843693787522";
+/* Небоскрёб для блога */
+google_ad_slot = "1678444534";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>   	  </div>
+</td>
+
+    <td valign="top" class="padding0 paddingBottom10 paddingLeft10 borderTop1 borderColorGray">    <div align="center" class="iborder borderColorGray" style="border-top:none;">
+      <table align="center" cellpadding="0" cellspacing="0" class="bgYellowFadeTop">
+  <tr>
+  
+    <td width="100%" align="center" valign="top">
+      <div class="padding10 txt120 bold" style="height:60px; padding-top:14px;"> <img src="<?=$_SESSION['SITE_ROOT']?>images/piggy_cash_time.png" width="32" height="32" hspace="8" align="absmiddle">Хотите получать
+        <span class="txtRed">дополнительный</span>
+         доход от продажи наших работ?</div>
+        <div class="padding10"><span class="txtRed">Для этого не нужно ничего делать! </span><br>
+Просто добавьте ссылку на наш сайт в свою социальную сеть: </div>
+	</td>
+  </tr>
+  <tr class="borderTop1 borderColorGray bgF4FF">
+    
+    <td align="center" valign="top" class="padding10">
+<script src="http://odnaknopka.ru/ok3.js" type="text/javascript"></script> &nbsp;&nbsp;<a href="../?article=set_distributor_link">подробнее...</a></td>
+  </tr>
+      </table>
+    </div><form name="works" method="post" action="" class="padding0"><!--
+    
+  	ОСНОВНОЙ КОНТЕНТ
+    
+  --><style type="text/css">
+tr#authors_menu td {
+	padding-right: 14px;
+	padding-left: 14px;
+}
+</style>
+<table cellpadding="0" cellspacing="0">
+      <tr>
+        <td><img src="<?=$_SESSION['SITE_ROOT']?>images/author_woman.jpg" width="160" height="113" hspace="10" vspace="19" align="absmiddle"></td>
+        <td width="100%" class="paddingTop4"><h2 class="sectionHeader">Авторам</h2>
+		  <table width="100%" cellpadding="6" cellspacing="0">
+		    <tr id="authors_menu" bgcolor="#F5F5F5" class="borderBottom1 borderTop1 borderColorGray borderLeft">
+		      <td><a href="../?section=authors">Сотрудничество</a></td>
+		      <td><a href="../?section=author_agreement">Соглашение</a></td>
+		      <td bgcolor="#FFFFFF" style="border-bottom:none; border-top:solid 1px #CCC;"><a href="../?section=faq_authors">FAQ</a></td>
+		      <td><a href="../?section=register">Регистрация</a></td>
+		      <td nowrap="nowrap"><a href="../author">Вход в аккаунт</a></td>
+		      <td width="100%" bgcolor="#FFFFFF" style="border-top:none;">&nbsp;</td>
+	        </tr>
+		    <tr class="borderBottom1 borderLeft borderColorGray">
+		      <td colspan="6" style="border-right:solid 1px #CCC;">&nbsp;</td>
+	        </tr>
+	      </table>
+</td>
+      </tr>
+    </table>
+<h2 class="sectionHeader">FAQ для авторов</h2>	<a name="top"></a>
+	<ol class="content">
+      <li><a href="#sale_beg">Как начать продавать свои работы?</a></li>
+      <li><a href="#potential">В моём аккаунте указаны какие-то &laquo;Потенциальные&raquo; работы.
+        Что это такое?</a> </li>
+      <li><a href="#your_profit">Какова ваша выгода от продажи моих работ?</a></li>
+      <li><a href="#all_money">Правда ли, что я могу продавать свои работы без вычета ваших комиссионных в течение 3 месяцев?</a></li>
+      <li><a href="#short_time">Вы утверждаете, что  мне выгодно размещать как можно больше работ
+          за наименьший промежуток времени. Поясните, почему?</a></li>
+      <li><a href="#time_to_add">У меня около 300 готовых работ. Скажите, сколько времени нужно для размещения их в вашем каталоге?</a></li>
+      <li><a href="#yourself">Мне очень нравится ваш сайт и ваша идея, но у меня совершенно нет времени на размещение своих работ... Нельзя ли прислать вам свой список, чтобы вы сделали это сами?</a></li>
+      <li><a href="#noreccomend">Обязан ли я следовать вашим рекомендациям по ценам на готовые работы?</a></li>
+      <li><a href="#checking">Почему выставляемые мною на продажу работы не размещаются
+          в вашем каталоге автоматически? Можете ли вы не утвердить их?</a> </li>
+      <li><a href="#unical_worx">Могу ли я получать  на вашем сайте заказы на выполнение уникальных творческих работ?</a></li>
+      <li><a href="#money_back">Что вы сделаете, если заказчик потребует вернуть ему деньги за мою работу?</a></li>
+      <li><a href="#plagiat">Станете ли вы продавать мои работы от собственного лица?</a></li>
+      <li><a href="#fee_order">Как вы расплачиваетесь с авторами?</a></li>
+      <li><a href="#communication">У вас на сайте не указан ни один контактный email! Почему? И как с вами связаться?</a></li>
+      <li><a href="#noanswer">Я посылаю вам сообщения из своего аккаунта, но не получаю ни одного
+            ответа! Почему?</a></li>
+      <li><a href="#add_profit">Есть ли у вас какие-нибудь дополнительные выгоды для исполнителей Diplom.com.ru?</a></li>
+    </ol>      
+      <!--<table width="100%"  cellspacing="0" cellpadding="0">
+      <tr>
+        <td rowspan="2" valign="top"><img src="<?=$_SESSION['SITE_ROOT']?>images/customer1.jpg" width="64" height="64" hspace="4" vspace="0" border="1"></td>
+        <td width="100%" height="25" align="center" bgcolor="#DEFFCE"> <a href="#add_question"><strong>Добавьте свой вопрос.</strong></a> Мы постараемся ответить на него в течение 24 часов.</td>
+      </tr>
+      <tr>
+        <td valign="top" style="padding:4px"><strong>Внимание!</strong> Пожалуйста, не задавайте в этом разделе вопросы по какому-либо <strong>конкретному</strong> заказу. Делайте это <a href="#new_message">на страницах, где данные заказы фигурируют</a>. Текущий раздел предназначен для ответов на общие вопросы. </td>
+      </tr>
+      <tr>
+        <td height="30" colspan="2"><hr size="1" noshade></td>
+        </tr>
+    </table>-->
+    <hr noshade>
+      <ol start="1" class="content">
+          <h4>
+            <li><a name="sale_beg"></a>Как начать продавать свои работы?
+        </li>
+          </h4>
+          <p>Это не просто, а <b>очень просто</b>! :)</p>
+          Для этого вам нужно:
+        <ul style="padding:10px; margin:10px">
+          <li><a href="../?section=register">Зарегистрироваться</a></li>
+          <li>Зайти в свой аккаунт </li>
+          <li>Щёлкнуть по ссылке &laquo;+Добавить работу &raquo;</li>
+          <li>На загрузившейся странице указать требуемые данные и подтвердить
+            их, нажав кнопку &laquo;Подтвердить!&raquo;</li>
+        </ul>
+        После утверждения заявленной вами работы администратором, на её покупку
+        смогут подавать заявки потенциальные заказчики, о чём вы будете <b>автоматически</b> проинформированы. 
+        <p><a href="#top"><img src="<?=$_SESSION['SITE_ROOT']?>images/arrows/arrow_sm_up_blue.gif" width="14" height="12" hspace="2" border="1" align="absmiddle">вверх</a></p>
+        
+          <h4><li><a name="potential">В моём аккаунте указаны какие-то &laquo;Потенциальные&raquo; работы.
+        Что это такое?</a></li></h4>
+            <p>Все имеющиеся у вас работы. Эти данные вы
+              указывали при регистрации. Они позволяют вам видеть
+              свой, пока ещё не используемый, потенциал :) </p>
+            <p><a href="#top"><img src="<?=$_SESSION['SITE_ROOT']?>images/arrows/arrow_sm_up_blue.gif" width="14" height="12" hspace="2" border="1" align="absmiddle">вверх</a></p>
+            <h4><li><a name="your_profit"></a>Какова ваша выгода от продажи моих
+                работ?</li>
+          </h4>
+        
+
+            <p>Что ж, всё просто — нам это выгодно, иначе мы, разумеется, не
+              стали бы вкладывать огромные усилия и деньги в наш web-сайт. </p>
+            <P>С каждой продажи (за исключением <a href="#tblProfit">периода
+                бесплатного обслуживания</a>),
+              мы получаем свои <a href="#tblProfit">комиссионные в размере от
+              10% до 20%</a>. Однако своей
+              главной миссией мы считаем стремление сделать рынок образовательных
+              услуг более цивилизованным, и способствовать тому, чтобы на нём
+              работали честные и ответственные профессионалы. </P>
+            <p><a href="#top"><img src="<?=$_SESSION['SITE_ROOT']?>images/arrows/arrow_sm_up_blue.gif" width="14" height="12" hspace="2" border="1" align="absmiddle">вверх</a></p>
+        
+          <h4><li><a name="all_money"></a>Правда ли, что я могу продавать свои
+              работы без вычета ваших комиссионных в течение 3 месяцев?</li></h4>
+        
+          <p>Если разместите не менее 1000 работ, то период бесплатного обслуживания
+            для вас будет именно таким. Все варианты вы можете увидеть в этой
+            таблице:</p>
+          <a name="tblProfit"></a> <!-- #BeginLibraryItem "/Library/block_tbl_author_ctat.lbi" --><table width="1%" cellpadding="4" cellspacing="1" bgcolor="#CCCCCC" class="solidGray">
+            <tr bgcolor="#FFFFFF">
+              <td colspan="3"><h4 class="header6bottom"><strong>Таблица ваших
+                    выгод :))) </strong></h4>                </td>
+            </tr>
+            <tr>
+              <td width="78" bgcolor="#E4E4E4"><strong> Количество выставленных
+                  работ </strong></td>
+              <td width="95" bgcolor="#E4E4E4"><strong style="cursor:default" title="Вычитается от заявленной вами стоимости работ.">Комиссия <nobr>от
+                    продажи</nobr> (%%) </strong></td>
+              <td width="164"><strong style="cursor:default" title="Период, в течение которого вся выручка от продажи ваших работ остаётся у вас.">Период
+                  бесплатного обслуживания</strong></td>
+            </tr>
+            <tr bgcolor="#FFFFFF">
+              <td width="78" align="right"> до 50 </td>
+              <td width="95" align="right"> 25</td>
+              <td width="164" align="right"> нет </td>
+            </tr>
+            <tr bgcolor="#FFFFFF">
+              <td width="78" align="right"> 51-200 </td>
+              <td width="95" align="right"> 18 </td>
+              <td width="164" align="right"> 2 недели </td>
+            </tr>
+            <tr bgcolor="#FFFFFF" title="Ваш текущий статус">
+              <td width="78" align="right"> 201-500 </td>
+              <td width="95" align="right"> 15 </td>
+              <td width="164" align="right"> 1 месяц </td>
+            </tr>
+            <tr bgcolor="#FFFFFF">
+              <td width="78" align="right"> 501-1000 </td>
+              <td width="95" align="right"> 13</td>
+              <td width="164" align="right"> 2 месяца </td>
+            </tr>
+            <tr bgcolor="#FFFFFF">
+              <td width="78" align="right">&gt;1000 </td>
+              <td width="95" align="right"> 10 </td>
+              <td width="164" align="right"> 3 месяца </td>
+            </tr>
+          </table><!-- #EndLibraryItem --><p><a href="#top"><img src="<?=$_SESSION['SITE_ROOT']?>images/arrows/arrow_sm_up_blue.gif" width="14" height="12" hspace="2" border="1" align="absmiddle">вверх</a></p>
+          <h4><li><a name="short_time"></a>Вы утверждаете, что мне выгодно размещать
+            как можно больше работ за наименьший промежуток времени. Поясните,
+            почему?</li></h4>
+        
+          <p>Всё очень просто. Давайте поясним это на конкретном примере. </p>
+          <p>Итак, представьте, что у вас есть 503 готовые работы. Предположим
+            теперь, что за месяц вы разместили в нашем каталоге только 100 из
+            них, после чего продали первую. Таким образом, вы получаете
+            только 2 недели бесплатного обслуживания (<a href="#tblProfit">см.
+            таблицу</a>). Кроме того, заказчики смогут выбирать только из <strong>уже
+            размещённых</strong> вами 100 работ. </p>
+          <p>А вот если бы вы разместили
+            все 503 работы (или, хотя бы, 501 :), то, во-первых, получили бы
+            2 месяца бесплатного обслуживания (т.е. &#8212; в 4 раза больше!)
+            и во-вторых, в течение всего этого срока (как и в дальнейшем, разумеется),
+            ваши работы покупали бы гораздо чаще (500 работ против 100!). Простой
+            арифметический подсчёт показывает огромную выгоду для вас во втором
+            случае &#8212; объём бесплатных продаж увеличился бы для вас примерно <strong>в
+            20 раз!!! </strong></p>
+          <p><a href="#top"><img src="<?=$_SESSION['SITE_ROOT']?>images/arrows/arrow_sm_up_blue.gif" width="14" height="12" hspace="2" border="1" align="absmiddle">вверх</a></p>
+		<h4>
+          <li><a name="time_to_add"></a>У меня около 300 готовых работ. Скажите,
+            сколько времени нужно для размещения их в вашем каталоге?</li>
+		</h4>
+		<p>Это зависит от двух основных факторов &#8212; вашей пользовательской подготовки
+		  и скорости вашего подключения к интернет. За час можно разместить от
+		  15 до 70 работ. Таким образом, лично вам может потребоваться от 4 до
+		  20 часов. </p>
+		<p><a href="#top"><img src="<?=$_SESSION['SITE_ROOT']?>images/arrows/arrow_sm_up_blue.gif" width="14" height="12" hspace="2" border="1" align="absmiddle">вверх</a></p>
+		<h4>
+		    <li><a name="yourself"></a>Мне очень нравится ваш сайт и ваша идея, но
+		      у меня совершенно нет времени на размещение своих работ... Нельзя
+		      ли прислать вам свой список, чтобы вы сделали это сами?</li>
+	    </h4>
+		<p>В качестве исключения это возможно, но в этом случае наши комиссионные увеличатся
+		  до 50%. Кроме того, вы теряете право на <a href="#tblProfit">период бесплатного
+		  обслуживания</a>. </p>
+		<p><a href="#top"><img src="<?=$_SESSION['SITE_ROOT']?>images/arrows/arrow_sm_up_blue.gif" width="14" height="12" hspace="2" border="1" align="absmiddle">вверх</a></p>
+		<h4><li></li>
+		<a name="checking">Почему выставляемые мною на продажу работы
+              не размещаются в вашем каталоге автоматически? Можете ли вы не
+          утвердить их?</a></li></h4>
+		<p>Потому что мы сначала должны проверить заявленные вами данные на наличие
+		  ошибок. Если мы их не обнаружим, утвердим вашу работу. В противном
+		  случае, мы либо исправим их, либо свяжемся с вами для прояснения спорных
+		  моментов.</p>
+		<p>Если мы ничего не делаем с вашей работой, то через 3 суток она утверждается
+		  автоматически (интервал может быть изменён вручную). Мы можем не утвердить
+		  вашу работу, если вы указываете в её параметрах свои контактные данные,
+		  либо другую информацию, не имеющую непосредственного отношения к данной
+		  работе. </p>
+		<p><a href="#top"><img src="<?=$_SESSION['SITE_ROOT']?>images/arrows/arrow_sm_up_blue.gif" width="14" height="12" hspace="2" border="1" align="absmiddle">вверх</a></p>
+        <h4><li><a name="noreccomend"></a>Обязан ли я следовать вашим рекомендациям
+            по ценам на готовые работы?</li></h4>
+        <p>Нет, не обязаны. Вы вправе устанавливать собственные цены. </p>
+        <p><a href="#top"><img src="<?=$_SESSION['SITE_ROOT']?>images/arrows/arrow_sm_up_blue.gif" width="14" height="12" hspace="2" border="1" align="absmiddle">вверх</a></p>
+        <h4><li><a name="unical_worx"></a>Могу ли я получать на вашем сайте заказы
+            на выполнение уникальных творческих работ?</li></h4>
+        <p>Вы можете доработать свой ранее проданный диплом, реферат или курсовую
+          до уровня уникального по желанию своего заказчика. Кроме того, вы можете
+          участвовать в качестве исполнителя уникальных творческих работ в нашем
+          втором проекте &#8212; <a href="http://www.diplom.com.ru" target="_blank">Diplom.com.ru</a>.</p>
+        <p><a href="#top"><img src="<?=$_SESSION['SITE_ROOT']?>images/arrows/arrow_sm_up_blue.gif" width="14" height="12" hspace="2" border="1" align="absmiddle">вверх</a></p>
+        <h4><li><a name="money_back"></a>Что вы сделаете, если заказчик потребует
+            вернуть ему деньги за мою работу?</li></h4>
+        <p>Подобные случаи регламентируются нашим <a href="../old/agreement.htm" target="_blank">пользовательским
+            соглашением</a>.
+          Если контекстуально текст работы соответствует указанному вами содержанию,
+          деньги заказчику не возвращаются. Соответственно, мы не будем требовать
+          возврата денег у вас. </p>
+        <p><a href="#top"><img src="<?=$_SESSION['SITE_ROOT']?>images/arrows/arrow_sm_up_blue.gif" width="14" height="12" hspace="2" border="1" align="absmiddle">вверх</a></p>
+        <h4><li><a name="plagiat"></a>Станете ли вы продавать мои работы от собственного
+            лица?</li></h4>
+        <p>Ни в коем случае! Ключевой принцип нашего с вами сотрудничества заключается
+          в том, что мы признаём ваше исключительное право собственности на свои
+          работы и предоставляем вам эксклюзивное право их продажи. Себе мы оставляем
+          только <a href="#tblProfit">комиссию от продажи</a>. </p>
+        <p><a href="#top"><img src="<?=$_SESSION['SITE_ROOT']?>images/arrows/arrow_sm_up_blue.gif" width="14" height="12" hspace="2" border="1" align="absmiddle">вверх</a></p>
+        <h4><li><a name="fee_order"></a>Как вы расплачиваетесь с авторами?</li></h4>
+        <p>Наиболее предпочтительные способы &#8212; через платёжную систему <a href="http://www.money.yandex.ru">Яндекс.деньги</a> или
+            банковским переводом. По отдельной договорённости и в исключительных
+          случаях возможны другие формы расчётов. </p>
+        <p><a href="#top"><img src="<?=$_SESSION['SITE_ROOT']?>images/arrows/arrow_sm_up_blue.gif" width="14" height="12" hspace="2" border="1" align="absmiddle">вверх</a></p>
+        <h4><li><a name="communication"></a>У вас на сайте не указан ни один
+            контактный email! Почему? И как с вами связаться?</li></h4>
+        <p>Это сделано для защиты нашей системы от спама. К сожалению, в настоящее
+          время любой опубликованный email быстро становится добычей спамеров. </p>
+        <p>Однако связаться с нами не составит для вас никакого труда. Вы можете
+            сделать это из раздела контакты (в своём аккаунте или из <a href="../old/feedback.php">публичного
+          раздела</a>),
+            либо <a href="#add_question">с
+            этой страницы</a>, если вам требуется получить информацию, не связанную
+            с какой-либо конкретной работой. В остальных случаях вам следует
+            зайти в свой аккаунт и в разделе с нужной работой (эти разделы формируются
+            в зависимости от <a href="javascript:alert('Статус работ может быть следующим:\n--------------------------------------------------\n1.Неутверждённая (находящаяся на рассмотрении администратора)\n2.Утверждённая (допущенная к продаже)\n3.Заявка (заказчик заказал её, но пока не подтвердил оплату, или оплатил заказ не полностью)\n4.Заказ (полностью оплаченная заказчиком заявка)\n5.Отправленная (вы сообщили, что отослали работу заказчику)\n6.Задолженность (мы ещё не расплатились с вами за эту работу или расплатились не полностью)\n7.Закрытая (мы полностью расплатились с вами за этот заказ)');">статуса
+            работ</a>) щёлкнуть по ссылке &laquo;новое&raquo; в столбце &laquo;сообщения&raquo; в
+          строке с этой работой:<a name="new_message"></a></p>
+        <p><img src="<?=$_SESSION['SITE_ROOT']?>images/illustrations/new_message.gif" width="484" height="156" border="1"></p>
+        <p><a href="#top"><img src="<?=$_SESSION['SITE_ROOT']?>images/arrows/arrow_sm_up_blue.gif" width="14" height="12" hspace="2" border="1" align="absmiddle">вверх</a></p>
+        <h4><li><a name="noanswer"></a>Я посылаю вам сообщения из своего аккаунта,
+            но не получаю ни одного ответа! Почему?</li></h4>
+		<p>Скорее всего, статус вашего сообщения не соответствует его содержанию. Напоминаем,
+		  что ваши сообщения могут быть либо связаны с какой-нибудь конкретной
+		  работой, либо нет (например, вопросы общего характера, помощь по работе
+		  с системой и т.п.).</p>
+		<p>В первом случае вы должны посылать сообщения из разделов, где фигурирует
+		  данная работа (<a href="#new_message">см. выше</a>). Во втором &#8212; через
+		  <a href="#add_question">форму отправки</a> в конце этого раздела. </p>
+		<p><a href="#top"><img src="<?=$_SESSION['SITE_ROOT']?>images/arrows/arrow_sm_up_blue.gif" width="14" height="12" hspace="2" border="1" align="absmiddle">вверх</a></p>
+          <h4><li><a name="add_profit"></a>Есть ли у вас какие-нибудь дополнительные
+              выгоды для исполнителей <a href="http://diplom.com.ru/job.htm">Diplom.com.ru</a>?</li>
+        </h4>
+        <p>Да. Все написанные исполнителями работы в рамках проекта <a href="http://diplom.com.ru/">Diplom.com.ru</a> так
+            же остаются в их собственности (помимо прямых выплат за их создание).
+            Исполнители получают эксклюзивное право их продажи на нашей торговой
+          площадке, если решат разместить их там. </p>
+        <p><a href="#top"><img src="<?=$_SESSION['SITE_ROOT']?>images/arrows/arrow_sm_up_blue.gif" width="14" height="12" hspace="2" border="1" align="absmiddle">вверх</a>      </p>
+      </ol>
+      
+<hr noshade size="1">
+<h4><a href="../?section=register"><strong>Регистрация в проекте</strong></a></h4></form><!--
+
+  	КОНЕЦ ОСНОВНОГО КОНТЕНТА
+
+--><hr noshade><br>
+
+<table cellspacing="0" cellpadding="0">
+  <tr>
+    <td rowspan="2"><img src="<?=$_SESSION['SITE_ROOT']?>images/juniors_mini.jpg" width="90" height="90" hspace="10" class="iborder2 borderColorOrangePale"></td>
+    <td><h1 class="padding10 txt110"><a href="http://www.educationservice.ru">Дипломы, диссертации, курсовые работы, дипломы MBA, рефераты &#8212; все виды творческих работ на заказ!</a></h1></td>
+  </tr>
+  <tr>
+    <td class="padding10 paddingTop0">EducationService.ru &#8212; 8 лет безупречной работы на рынке написания студенческих работ!</td>
+  </tr>
+</table>
+<br>
+<hr>
+<div class="padding10 txt110">
+<h3 style="display:inline">Хотите задать вопрос/поделиться мнением?</h3><br>
+Сообщите его нам:</div><a name="message_start"></a>
+<br>
+  <form name="form_add_comment" method="post" style="text-align:left;margin-bottom:0px;" class="paddingBottom0">
+
+  Укажите свой емэйл, если хотите получить персональный ответ:
+<input name="email" type="text" size="40" value="">
+  <div class="paddingTop4 paddingBottom4">Как вас зовут?
+  <input name="name" type="text" size="40" value="">
+  </div>
+<textarea name="comment" id="comment" rows="10" class="widthFull"></textarea>	
+<div class="padding4" align="left">
+    <input type="submit" value="Отправить!">
+    <input name="add_comment_type" type="hidden" value="section=faq_authors"></div>
+</form>
+    <br></td>
+    <td width="23%" valign="top" class="contentColumn borderTop1 borderColorGray paddingLeft20"><!--
+    
+    ПРАВАЯ КОЛОНКА top
+    
+    --><strong class="txt120"><img src="<?=$_SESSION['SITE_ROOT']?>images/account_faq.gif" width="32" height="32" align="absmiddle">Спроси эксперта:</strong><!--<ul>
+      <li><a href="#avoid_plagio">Как избежать плагиата</a></li>
+      <li><a href="#avoid_troubles">Как не стать жертовой обмана</a></li>
+      <li><a href="#bad_teacher">Если препод к вам неровно дышит...</a></li>
+      <li><a href="#get_money">Как сделать свою творческую работу источником постоянного дохода</a></li>
+      <li><a href="#get_more_money">Как сделать ЧУЖИЕ творческие работы источником СВОЕГО дохода</a></li>
+      </ul>-->
+
+      <div class="paddingTop10 paddingBottom10"><hr noshade></div>
+        <strong><a name="avoid_plagio"></a><img src="<?=$_SESSION['SITE_ROOT']?>images/question.gif" width="16" height="16" hspace="4" align="absmiddle">Как избежать плагиата<!--Как избежать плагиата--></strong>      
+<div class="article">Прежде
+                всего, необходимо определить разницу между плагиатом и «использованием
+                материалов»<BR>
+                      <A href="../?article=plagiat">плагиат это...</A></div>
+    <strong><a name="avoid_troubles"></a><img src="<?=$_SESSION['SITE_ROOT']?>images/question.gif" width="16" height="16" hspace="4" align="absmiddle">Как не стать жертовой обмана<!--Как не стать жертовой обмана--></strong>
+      <div class="article">За
+                то время, пока мы занимаемся этим бизнесом, мы пришли к ряду
+                не очень радостных выводов по поводу его состояния. Сайтов, оказывающих
+                услуги профессионально — ничтожный процент, что же касается независимых
+                исполнителей, то тут, вообще, творится невообразимое...<BR>
+      <A href="../?article=affair">принимаем меры...</A></div>
+    <strong><a name="bad_teacher"></a><img src="<?=$_SESSION['SITE_ROOT']?>images/question.gif" width="16" height="16" hspace="4" align="absmiddle">Если препод к вам неровно дышит...<!--Если препод к вам неровно дышит...--></strong>
+      <div class="article">Наверное, самое неприятное, что может случиться со студентом...<BR>
+      <A href="../?article=bad_teacher">ищем выход из ситуации...</A></div>
+    <strong><a name="get_money"></a><img src="<?=$_SESSION['SITE_ROOT']?>images/question.gif" width="16" height="16" hspace="4" align="absmiddle">Как сделать свою творческую работу источником постоянного дохода<!--Как сделать свою творческую работу источником постоянного дохода--></strong>
+      <div class="article"> А
+                вам приходила в голову мысль не просто защитить дипломную или
+                курсовую работу, и &laquo;забыть навсегда&raquo;, но и получить
+                за неё деньги?<BR>
+                      <A href="../?article=recruits">зарабатываем &laquo;своим умом&raquo;&nbsp;...</A></div>
+    <strong><a name="get_more_money"></a><img src="<?=$_SESSION['SITE_ROOT']?>images/question.gif" width="16" height="16" hspace="4" align="absmiddle">Как сделать ЧУЖИЕ творческие работы источником СВОЕГО дохода<!--Как сделать ЧУЖИЕ творческие работы источником СВОЕГО дохода--></strong>
+      <div class="article">А
+                вам приходила в голову другая мысль? Что деньги можно зарабатывать ещё более простым способом?<BR>
+                      <A href="../?article=set_distributor_link">зарабатываем &laquo;своим умом&raquo; ещё больше!...</A></div>
+
+      <div class="padding4">Все статьи <a href="../?article=all"><strong>здесь</strong></a>.</div>
+
+<hr noshade>     
+
+      <div class="paddingTop10">      <script type="text/javascript"><!--
+google_ad_client = "ca-pub-5247843693787522";
+/* square1 */
+google_ad_slot = "8553976430";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+   </div><!-- 
+            
+    КОНЕЦ ПРАВОЙ КОЛОНКИ top
+      
+    --></td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center" class="borderBottom4 borderColorGray">      <script type="text/javascript"><!--
+google_ad_client = "pub-5247843693787522";
+/* 728x90, создано 02.05.11 */
+google_ad_slot = "6184332862";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+    </script>
+    <script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+    </script>      </td>
+  </tr>
+  <tr bgcolor="#E1E1FF">
+    <td height="50" colspan="2" valign="top" bgcolor="#E1E1FF" class="txt100" id="flat"><a href="../index.php">&#8226; Главная</a> &nbsp;<a href="../?section=payment">&#8226; Способы оплаты</a> &nbsp;<a href="../?section=faq">&#8226; FAQ</a> &nbsp;<a href="../?section=useful">&#8226; Полезное</a> &nbsp;<a href="../?section=agreement">&#8226; Пользовательское соглашение</a> &nbsp;<a href="../?section=partnership">&#8226; Сотрудничество</a></td>
+    <td valign="top" class="paddingTop14">&copy;<a href="http://www.eduservice.biz">EducationService</a> 2003-2011</td>
+  </tr>
+</table>
+</body>
+</html>

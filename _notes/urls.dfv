@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<favorite_folder name="%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5%20%D1%81%D0%BE%D0%BE%D0%B1%D1%89%D0%B5%D0%BD%D0%B8%D0%B5..." state="expanded">
+<favorite_folder name="%D0%A1%D1%83%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%83" state="expanded">
+<favorite name="%D0%B0%D0%B2%D1%82%D0%BE%D1%80%D1%83" value="?menu=messages&action=compose&mailto=author&user_id=<?=$author_id?>"/>
+<favorite name="%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D1%87%D0%B8%D0%BA%D1%83" value="?menu=messages&action=compose&mailto=customer&user_id=<?=$arr['user_id']?>"/>
+<favorite name="%D1%81%D0%BE%D1%82%D1%80%D1%83%D0%B4%D0%BD%D0%B8%D0%BA%D1%83" value="?menu=messages&action=compose&mailto=workers&user_id=<?=$worker_id?>"/>
+</favorite_folder>
+<favorite_folder name="%D0%A1%D0%B2%D1%8F%D0%B7%D0%B0%D0%BD%D0%BD%D0%BE%D0%B5%20%D1%81%20%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%BE%D0%BC" state="expanded">
+<favorite name="%D0%BF%D0%BE%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D1%83" value="?menu=messages&action=compose&order_id=<?=$arr['number']?>"/>
+<favorite name="%D0%BF%D0%BE%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B5" value="?menu=orders&work_id=<?=$arr['work_id']?>"/>
+</favorite_folder>
+</favorite_folder>
+<favorite_folder name="%D0%9E%D1%82%D1%84%D0%B8%D0%BB%D1%8C%D1%82%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C..." state="expanded">
+<favorite_folder name="%D0%97%D0%90%D0%9A%D0%90%D0%97%D0%AB" state="expanded">
+<favorite name="%D0%BF%D0%BE%20%D0%B0%D0%B2%D1%82%D0%BE%D1%80%D1%83" value="?menu=orders&author_id=<?=$author_id?>"/>
+<favorite name="%D0%BF%D0%BE%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D1%87%D0%B8%D0%BA%D1%83" value="?menu=orders&customer_id=<?=$arr['user_id']?>"/>
+</favorite_folder>
+<favorite_folder name="%D0%92%D1%8B%D0%BF%D0%BB%D0%B0%D1%82%D1%8B" state="expanded">
+<favorite name="%D0%BF%D0%BE%20%D0%B0%D0%B2%D1%82%D0%BE%D1%80%D1%83%20%D0%B2%D1%8B%D0%BF%D0%BB%D0%B0%D1%82%D1%8B" value="?menu=payoutss&payout_author=<?=$arr['payout_author']?>"/>
+<favorite name="%D0%BF%D0%BE%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8E%20%D0%B2%D1%8B%D0%BF%D0%BB%D0%B0%D1%82%D1%8B" value="?menu=payouts&author_id=<?=$this_author_id?>"/>
+</favorite_folder>
+</favorite_folder>
+<favorite_folder name="%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D1%8B" state="expanded">
+<favorite name="%D0%94%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC%D0%BD%D1%8B%D0%B5%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B" value="?mode=showcase&work_type=Дипломная работа"/>
+<favorite name="%D0%94%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC%20MBA" value="?mode=showcase&work_type=Диплом MBA"/>
+<favorite name="%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F" value="?mode=showcase&work_type=Курсовая"/>
+<favorite name="%D0%A0%D0%B5%D1%84%D0%B5%D1%80%D0%B0%D1%82" value="?mode=showcase&work_type=Реферат"/>
+<favorite name="%D0%94%D0%B8%D1%81%D1%81%D0%B5%D1%80%D1%82%D0%B0%D1%86%D0%B8%D1%8F" value="?mode=showcase&work_type=Диссертация"/>
+</favorite_folder>
+<favorite_folder name="%D0%90%D0%B2%D1%82%D0%BE%D1%80" state="expanded">
+<favorite name="%D0%98%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%8B" value="?menu=tools"/>
+<favorite_folder name="DocsReducer" state="collapsed">
+<favorite name="%D0%9A%D0%B0%D0%BA%20%D1%8D%D1%82%D0%BE%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D1%82" value="?menu=tools&point=howitworks"/>
+</favorite_folder>
+</favorite_folder>

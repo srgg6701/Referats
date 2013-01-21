@@ -1,0 +1,30 @@
+@charset "windows-1251";
+/* CSS Document */
+tr.borderBottom4 td, td.borderBottom4, div.borderBottom4 {
+	border: none;
+	border-bottom:4px solid;
+}
+tr.borderBottom2 td, td.borderBottom2, .borderBottom2 {
+	border: none;
+	border-bottom:2px solid;
+}
+tr.borderBottom1 td, td.borderBottom1, .borderBottom1 {
+	border: none;
+	border-bottom:1px solid;
+}
+table.borderColorGray  td, tr.borderColorGray  td, .borderColorGray { border-color:#CCC; }
+table.borderColorOrange, tr.borderColorOrange td, .borderColorOrange { border-color:#F90; }
+tr.borderColorOrangePale td, td.borderColorOrangePale, .borderColorOrangePale { border-color:#FFCC00; }
+tr.borderLeft td, td.borderLeft { border-left: solid 1px; } 
+.borderTop1, tr.borderTop1 td { border-top:solid 1px; }
+.iborder {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+}
+.iborder2 {border:solid 2px;}

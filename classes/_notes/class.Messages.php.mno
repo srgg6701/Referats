@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="MM_css_include" value="css/border.css,css/padding.css,css/style.css,css/txt.css" />
+	<infoitem key="MM_css_exclude" value="" />
+	<infoitem key="showOnOpen" value="true" />
+	<infoitem key="notes" value="Протестировать на удалённом сервере отсылку сообщений в advanced-режиме." />
+	<infoitem key="status" value="needs attention" />
+</info>

@@ -1,0 +1,1 @@
+a:3:{s:4:"File";s:76:"/home/rossorig/domains/diplom.com.ru/public_html/mail/incoming/php-robot.txt";s:8:"SkipBody";i:0;s:8:"SaveBody";s:63:"/home/rossorig/domains/diplom.com.ru/public_html/esys4/scripts";}

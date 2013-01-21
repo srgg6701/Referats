@@ -1,0 +1,40 @@
+.width755 { width:755px; }
+h1, h2, h3, h4, h5, h6, body, td {
+	font-family: Arial, Helvetica, sans-serif; color:#000000; text-decoration:none;
+}
+body { font-size:90% }
+.pT0 { padding-top:0; margin-top:0}
+.pT2 { padding-top:2px; margin-top:0}
+.pT4 { padding-top:4px; margin-top:0}
+.pT6 { padding-top:6px; margin-top:0}
+.pT8 { padding-top:8px; margin-top:0}
+.pT10 { padding-top:10px; margin-top:0}
+
+a {	color: #006600;}
+a:hover { text-decoration:underline; color:#000000; }
+
+.pB0 { padding-bottom:0; margin-bottom:0}
+.pB2 { padding-bottom:2px; margin-bottom:0}
+.pB4 { padding-bottom:4px; margin-bottom:0}
+.pB6 { padding-bottom:6px; margin-bottom:0}
+.pB8 { padding-bottom:8px; margin-bottom:0}
+.pB10 { padding-bottom:10px; margin-bottom:0}
+.justTxt {
+	color: #000000;
+	text-decoration: none;
+	cursor: text;
+}
+a.justTxt:hover {
+	text-decoration: none;
+}
+
+p.width755 {
+	width: 755px;
+}
+.psHdr090	{ font-size:90%; font-weight:bold; }
+.psHdr105	{ font-size:105%; font-weight:bold; }
+.psHdr110	{ font-size:110%; font-weight:bold; }
+.psHdr115	{ font-size:115%; font-weight:bold; }
+.psHdr120	{ font-size:120%; font-weight:bold; }
+
+.noBld { font-weight:200; }

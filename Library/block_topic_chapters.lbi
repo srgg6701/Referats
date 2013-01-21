@@ -1,0 +1,35 @@
+﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><form action="/old/search_list.php" method="post" name="search_form" style=" padding-bottom:0px; margin-bottom:0px"><table width="100%" border="0" cellpadding="2" cellspacing="0" bgcolor="#E4E4E4">
+      <tr>
+        <td colspan="2">Быстрый поиск:
+          <b><nobr>введите тему работы</nobr></b>          <input name="referat_subj" type="text" class="cells" id="referat_subj" style="width:100%">          </td>
+  </tr>
+      <tr>
+        <td rowspan="2"><a name="wtypes"></a>
+          <input name="diplom" type="checkbox" id="diplom" value="on" checked>
+  Диплом<br>
+  <input name="curs" type="checkbox" id="curs" value="on" checked>
+  Курсовая<br>
+  <input name="referat" type="checkbox" id="referat" value="on" checked>
+  Реферат<br>
+  <input name="other" type="checkbox" id="other" value="on" checked> 
+  Другое </td><td align="center"><!-- <input type="button" name="Submit" value="Найти!" onClick="sendOrder('реферат','referat_subj');">   --><input type="submit" name="Submit" value="Найти!">          </td>
+      </tr>
+      <tr>
+        <td align="center"><span title="Развернуть/свернуть быструю подсказку" style="color:#0000FF; text-decoration:underline; font-size: 120%; cursor:hand" onClick="(document.getElementById('accHelp').innerHTML=='')? document.getElementById('accHelp').innerHTML='<table  bgColor=#FFFF00 width=100% cellPadding=4 cellSpacing=0><tr><td><ol><li>Если вы хотите найти работу какого-то конкретного типа (диплом/курсовая/реферат/другое), отметьте галочкой соответствующий пункт (см. <a href=#wtypes>вверху</a>).</li> <li>Если вы хотите сузить область поиска не только типом работы, но и предметом (предметами), отметьте галочкой соответствующую строку (строки) в <a href=#wchapters>списке (каталоге) предметов ниже;</a> щелчок по названию предмета просто перенесёт вас в соответствующий раздел. </li> </ol> <p>Например: если вы отметите галочкой тип работы &laquo;<b>Диплом</b>&raquo; и предметы &laquo;<b>География, Экономическая география</b>&raquo; и &laquo;<b>Геодезия, геология</b>&raquo;, то наша система, соответственно, будет искать для вас только дипломы по этим предметам. По умолчению, она ищет среди всех предметов и всех типов работ (всё отмечено галочками).</p> <p>Если вы просто щёлкните по предмету &laquo;География, Экономическая география&raquo;, попадёте в список тем по данному (как и любому другому) предмету. </p></td></tr></table>':document.getElementById('accHelp').innerHTML='';">[?]</span></td>
+      </tr>
+    </table><span id="accHelp"></span></form>
+      <span class="arial"><img src="/images/arrows/inbox.gif" width="31" height="26" vspace="6" align="absmiddle" style="border:solid 1px #00ae00; padding-right: 4px; margin-right:4px">Отметьте галочкой раздел для поиска: </span>
+      <div class="arial" style="padding-left:2px"><a name="wchapters"></a>
+
+  <?php
+/*$pr_r=mysql_query("SELECT * FROM diplom_predmet ORDER BY sort, predmet");
+$pr_n=mysql_num_rows($pr_r);
+for($i=0;$i<$pr_n;$i++)
+{
+  $pnum=mysql_result($pr_r,$i,'number');
+  $ppredmet=mysql_result($pr_r,$i,'predmet');
+  echo("<input name='checkbox$pnum' type='checkbox' value='on' checked><a href='../worx.php?pnum=$pnum'>$ppredmet</a><br>\n");
+}*/
+?><script language="JavaScript" type="text/JavaScript" src="/create_topix.js">
+</script>
+</div>

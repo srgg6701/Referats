@@ -1,0 +1,202 @@
+@charset "windows-1251";
+/* CSS Document */
+
+
+#share42 {
+  display: inline-block;
+  padding: 6px 0 0 6px;
+  background: #FFF;
+  border: 1px solid #E9E9E9;
+  border-radius: 4px;
+}
+#share42:hover {
+  background: #F6F6F6;
+  border: 1px solid #D4D4D4;
+  box-shadow: 0 0 5px #DDD;
+}
+#share42 a {
+  opacity: 0.5;
+  vertical-align: bottom;
+}
+#share42:hover a {opacity: 0.7}
+#share42 a:hover {opacity: 1}
+
+/*	*/
+
+a { text-decoration:none; }
+a:hover { 
+	text-decoration:underline; 
+	color:#F90 !important; 
+	background-color:#FFF; 
+}
+a.header:hover { 
+	text-decoration:underline; 
+	color:#FC0 !important; 
+	background-color:#003399; 
+}
+body { 
+	padding:0; 
+	margin:0; 
+}
+body, td, div, p {font-family:Cambria, "Book Antiqua", "Bookman Old Style", Garamond;}
+ol li {
+	margin-left: 22px;/*от левого края*/
+	padding-left: 0px;/*между маркером и началом слова*/
+}
+ol.content li {
+	margin-left: 2px;/*от левого края*/
+	padding-left: 0px;/*между маркером и началом слова*/
+}
+ul li{
+	margin-left: -16px;/*от левого края*/
+	padding-left: 0px;/*между маркером и началом слова*/
+}
+table#tbl_customer	{
+	border-color:#003399;
+}
+table#tbl_customer td {
+	padding:4px !important;
+}
+.noBorder, table.noBorder td { 
+	border: none !important;
+}
+td#worxSubmenu {
+	border-left:solid 1px #999;
+	border-right:solid 1px #CCC;
+}
+tr.authorTblRowHeader {background-color:#efefef;}
+tr.first { height:28px; }
+td {font-size:0.86em;}
+td.cell_pay input {
+	padding: 2px;
+	border: 1px solid #CCC;
+}
+td.contentColumn {
+	/* [disabled]font-size: 100%; */
+	padding-top:23px;
+}
+td.tblHeaderCellLeft {
+	 padding:4px;
+	 font-weight:bold; 
+	 border: solid 1px #CCC;
+	 border-right:none; 
+	 padding-left:3px;
+}
+td.tblHeaderCellRight {
+	padding-right:4px;
+	border: solid 1px #CCC;
+	border-left: none;
+}
+
+/*меню в аккаунте автора*/
+#authorMenu span {padding:6px 12px 8px 12px;}
+#authorMenu a {
+	font-size:1.0em;
+	font-family:Arial, Helvetica, sans-serif;
+}
+#authorMenu span.autorMenuActive { 
+	background-color:#FFF;
+	border-color:#CCC;
+	border-width:1px 1px 0px 1px;
+	border-bottom:none;
+}
+#customer_menu td { 
+	padding:8px 10px 10px 6px;
+	border-top: solid 1px #CCC;
+	border-bottom: solid 2px #CCC;
+	font-weight:bold;
+}
+#tbl_customer input { 
+	padding:0px; 
+	margin:0px; 
+	margin-left:4px; 
+}
+#flat a {text-decoration:none;}
+#tdConnect img {margin:3px;}
+#worxSubmenu div {
+	padding:4px 8px 4px 4px;
+	/*font-weight:bold;*/
+	font-family:Arial, Helvetica, sans-serif;
+}
+.area_short { width: 210px; }
+.article {padding:6px 0px 16px 24px;}
+.bgF4FF {background-color:#f4f4ff;}
+.bg666 {
+	background-color:#666;/*EFEFEF*/
+	border:solid 1px #CCC;
+}
+.bgGrayLightFBFBFB {
+	background-color:#FbFbFb;
+}
+.bgGrayLightEFEFEF {
+	background-color:#EFEFEF;
+}
+.bgPale {
+	background-color: #FFC;
+}
+/*.bg666 a{
+	color:#fff;
+}*/
+.bgPanel {
+	background-image:url(../images/bg_panel_profile_top.jpg); 		
+	background-position:bottom; 
+	background-repeat:repeat-x;
+}
+.bgWhite {background-color:#FFF;}
+.bgYellow {background-color:#FF0;}
+.bgYellowFadeTop {
+	 background-image:url(../images/bg_income.png); 
+	 background-position:top; 
+	 background-repeat:repeat-x;
+ }
+.bgYellowFadeBottom {
+	 background-image:url(../images/bg_income.png); 
+	 background-position:bottom; 
+	 background-repeat:repeat-x;
+ }
+.block {
+	font-weight: bold;
+	display: block;
+}
+.bold {font-weight: bold;}
+
+.cellActive {background-color: #FC0;}
+.cellPassive {background-color: #039;}
+.cellPassive a, .cellPassive td {color:#FFF;}
+.header {
+	font-size: 2.2em;
+	/* [disabled]font-family: Arial, Helvetica, sans-serif; */
+	font-weight: bold;
+}
+.headerAuthorReg {
+	font-size: 140%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #F90;
+}
+.listingInTbl td {
+	border-bottom: solid 1px #CCC;
+	/*border-left: solid 1px #CCC;*/
+}
+.link {
+	color: #00F;
+	cursor: pointer;
+}
+
+.noBold {font-weight:200;}
+.userMenu {
+	background-image:url(../images/bg_income.png); 
+	background-position:bottom; 
+	background-repeat:repeat-x;
+}
+.userMenuUp {
+	background-image:url(../images/bg_income.png); 
+	background-position:top; 
+	background-repeat:repeat-x;
+}
+.widthFull {width:100%;}
+.workMenuActive { 
+	background-color:#FFF; 
+	border:solid #CCC; 
+	border-width:1px 1px 1px 1px;
+}

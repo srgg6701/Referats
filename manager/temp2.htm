@@ -1,0 +1,357 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Аккаунт сотрудника</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+<link href="../css/txt.css" rel="stylesheet" type="text/css">
+<link href="../css/padding.css" rel="stylesheet" type="text/css">
+<link href="../css/border.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../js.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../email_check.js"></script>
+<script type="text/javascript">
+function findOrderById(order_id_cell) {
+var inputOrder=document.getElementById(order_id_cell);
+	if (inputOrder.value=='') alert('Вы не указали id заказа!');
+	else location.href='?menu=money&amp;order_id='+inputOrder.value;
+}
+</script>
+
+<style>
+body { 
+	overflow:hidden; 
+	padding:0; 
+	margin:0;
+}
+</style>
+</head>
+<body onLoad="if (document.getElementById('test_mode_info')) MM_dragLayer('test_mode_info','',0,0,0,0,true,false,-1,-1,-1,-1,false,false,0,'',false,'');">
+
+<table width="100%" height="100%" align="center" cellpadding="0" cellspacing="0">
+<form name="form1" method="post" class="padding0" enctype="multipart/form-data">
+    
+  <tr class="borderBottom1 authorTblRowHeader" style="height:auto;">
+    <td colspan="2" align="left" nowrap class="padding6 paddingTop10" id="authorMenu" style="border-bottom-color:#E5E5E5;">        <span><a href="index.php">Главная</a></span>
+    	<span><a href="?menu=worx">Работы</a></span>
+    	<span class="iborder autorMenuActive" style="padding-right:4px;"><a href="?menu=orders">Заказы</a></span><a title="Найти заказ..." href="#" onClick="switchDisplay('find_order_row');return false;"><img src="<?=$_SESSION['SITE_ROOT']?>images/find.png" width="16" height="16" border="0" align="absmiddle"></a>
+        <span style="padding-right:4px;"><a href="?menu=money">Приход Д/С</a></span><a title="Новая проводка Д/С..." href="?menu=mone&amp;action=add"><img src="<?=$_SESSION['SITE_ROOT']?>images/plus.png" width="16" height="16" border="0" align="absmiddle"></a>
+        <span style="padding-right:4px;"><a href="?menu=payouts">Выплаты</a></span><a title="Новая проводка о выплате..." href="?menu=payout&amp;action=add"><img src="<?=$_SESSION['SITE_ROOT']?>images/plus.png" width="16" height="16" border="0" align="absmiddle"></a>
+        <span style="padding-right:4px;"><a href="?menu=messages">Сообщения</a></span><a title="Новое сообщение..." href="?menu=messages&amp;action=compose"><img src="<?=$_SESSION['SITE_ROOT']?>images/plus.png" width="16" height="16" border="0" align="absmiddle"></a>
+        <!--<span><a href="?menu=actors">Субъекты</a></span>-->
+        <span><a href="?menu=data">Данные</a></span>
+        <span><a href="?menu=agreements">Соглашения</a></span>
+		<span><a href="?menu=exit">Выход</a></span></td>
+    </tr>
+  <tr style="height:auto; display:none;" id="find_order_row">
+  	<td colspan="2" class="padding4 bgPale" style="padding-left:180px;">Найти заказ id 
+  	  <input id="find_order" name="find_order" type="text" size="2">
+  	  <input type="button" onClick="findOrderById('find_order');" value="Найти!"></td>
+  </tr>
+  <tr height="100%">
+    <td colspan="2" valign="top" style="border-top:solid 1px #CCC;"><div style="overflow:auto; height:100%;" class="padding8 paddingTop14"><script type="text/javascript">
+function go_orders_choice(selVal) {
+if (selVal) var go_page='?menu=orders&amp;order_status='+selVal;
+location.href=go_page;
+}
+</script>
+
+<table cellspacing="0" height="100%" cellpadding="4">
+  <tr style="height:auto;">
+    <td class="paddingTop0">	
+<div style="padding:4px 0px 2px 4px;"><img src="<?=$_SESSION['SITE_ROOT']?>images/filter_order.png" width="22" height="16" hspace="4" align="absmiddle" />Заказы<img src="<?=$_SESSION['SITE_ROOT']?>images/author2.gif" width="16" height="16" hspace="4" border="0" align="absmiddle" />автора id 33 &nbsp; [ <a href="?menu=orders&amp;order_status=paid_notsent" class="bold">сбросить фильтр</a> ]</div>    
+    
+</td>
+  </tr>    
+  <tr class="txt110 authorTblRowHeader" style="height:auto;">
+    <td nowrap="nowrap" class="paddingLeft0">
+    <img src="<?=$_SESSION['SITE_ROOT']?>images/basket_middle.png" width="21" height="20" hspace="4" border="0" align="absmiddle" title="id Заказа;
+Загрузить проводки по заказу">id,    
+    <img src="<?=$_SESSION['SITE_ROOT']?>images/money_received.gif" width="21" height="15" hspace="4" border="0" align="absmiddle" /> Проводки,<img src="<?=$_SESSION['SITE_ROOT']?>images/word2_mini.png" width="21" height="20" hspace="4" border="0" align="absmiddle" />id,
+    <img src="<?=$_SESSION['SITE_ROOT']?>images/unknown.gif" width="16" height="16" hspace="4" align="absmiddle">Владелец,
+    <img src="<?=$_SESSION['SITE_ROOT']?>images/calendar_clock.gif" width="19" height="15" hspace="4" align="absmiddle">Создан,
+    <img src="<?=$_SESSION['SITE_ROOT']?>images/file_name.gif" width="18" height="18" hspace="4" align="absmiddle">Название,
+    <img src="<?=$_SESSION['SITE_ROOT']?>images/order_wait.png" width="20" height="16" hspace="4" align="absmiddle">Статус,
+    <img src="<?=$_SESSION['SITE_ROOT']?>images/user_small.png" width="14" height="18" hspace="4" align="absmiddle">Заказчик,
+    <img src="<?=$_SESSION['SITE_ROOT']?>images/money_waiting.gif" width="16" height="15" hspace="4" align="absmiddle">Цена,
+    <img src="<?=$_SESSION['SITE_ROOT']?>images/money_received.gif" width="21" height="15" hspace="4" align="absmiddle">Перечислено,
+    <img src="<?=$_SESSION['SITE_ROOT']?>images/money_applied.gif" width="17" height="15" hspace="4" border="0" align="absmiddle">Подтверждено,
+    <img title="Добавить проводку по заказу..." src="<?=$_SESSION['SITE_ROOT']?>images/pay_rest.gif" width="16" height="16" hspace="4" border="0" align="absmiddle" />...</td>
+  </tr>
+  <tr height="100%">
+    <td class="padding0">
+      <div style="height:100%; overflow:auto;">
+<table width="100%" cellpadding="4" cellspacing="0" id="tbl_orders" rules="rows">
+  <tr bgcolor="#F7F7F7" title="Заказ оплачен не полностью...">
+    
+    <td align="right"><a href="?menu=money&amp;order_id=33" title="Загрузить проводки по заказу">33</a></td>
+    <td align="center" class="padding0"><a href="?menu=messages&amp;action=compose&amp;order_id=33" title="Отправить сообщение по заказу..."><img src="<?=$_SESSION['SITE_ROOT']?>images/envelope_small.png" width="14" height="10" border="0" /></a>&nbsp;</td>
+    
+    <td class="padding0"><a href="?menu=money&amp;order_id=33" title="Загрузить проводки по заказу 33"><img src="<?=$_SESSION['SITE_ROOT']?>images/money_received.gif" width="21" height="15" border="0" align="absmiddle" /></a></td>
+    
+    <td align="right"><a href="?menu=orders&amp;work_id=13" title="Отфильтровать заказы по работе id 13">13</a></td>
+    
+    <td class="paddingRight0"><a href="?menu=messages&amp;mailto=autho&amp;action=compose&amp;work_id=13" title="Отправить сообщение автору работы"><img src="<?=$_SESSION['SITE_ROOT']?>images/envelope_small.png" width="14" height="10" border="0" /></a></td>
+    
+    <td><a href="?menu=orders&amp;author_id=33" onMouseOver="this.title='Отфильтровать заказы по автору';"><img src="<?=$_SESSION['SITE_ROOT']?>images/author2.gif" width="16" height="16" hspace="4" border="0" align="absmiddle" /></a><a href="?menu=messages&amp;action=compose&amp;mailto=author&amp;user_id=33" title="Отправить сообщение автору"><span title='srgg140201@yandex.ru'>srgg140...</span></a></td>
+    <td nowrap>27.06.2011 17:55:45</td>
+    <td><a href="#">Счёт на оплату услуг.doc</a></td>
+    <td></td>
+    <td><a href="?menu=orders&amp;customer_id=3" title="Отфильтровать заказы по заказчику"><img src="<?=$_SESSION['SITE_ROOT']?>images/user_small.png" width="14" height="16" hspace="4" border="0" align="absmiddle"></a><a href="?menu=messages&amp;action=compose&amp;mailto=customer&amp;user_id=3" title="Отправить сообщение заказчику">astalavistas@gmail.com</a></td>
+    <td align="right">375</td>
+    <td align="right"><a href="?menu=money&amp;order_id=33" title="Отфильтровать проводки по заказу">370</a></td>
+    
+    <td align="center">370</td>
+    <td align="center"><a href="?menu=mone&amp;action=add&amp;order_id=33" title="Добавить проводку по заказу id 33"><img src="<?=$_SESSION['SITE_ROOT']?>images/plus_big.png" width="16" height="16" border="0" align="absmiddle" /></a></td>
+  </tr>
+  <tr bgcolor="#FFFF99" title="Работа не отправлена...">
+    
+    <td align="right"><a href="?menu=money&amp;order_id=32" title="Загрузить проводки по заказу">32</a></td>
+    <td align="center" class="padding0"><a href="?menu=messages&amp;action=compose&amp;order_id=32" title="Отправить сообщение по заказу..."><img src="<?=$_SESSION['SITE_ROOT']?>images/envelope_small.png" width="14" height="10" border="0" /></a>&nbsp;</td>
+    
+    <td class="padding0"><a href="?menu=money&amp;order_id=32" title="Загрузить проводки по заказу 32"><img src="<?=$_SESSION['SITE_ROOT']?>images/money_received.gif" width="21" height="15" border="0" align="absmiddle" /></a></td>
+    
+    <td align="right"><a href="?menu=orders&amp;work_id=4" title="Отфильтровать заказы по работе id 4">4</a></td>
+    
+    <td class="paddingRight0"><a href="?menu=messages&amp;mailto=autho&amp;action=compose&amp;work_id=4" title="Отправить сообщение автору работы"><img src="<?=$_SESSION['SITE_ROOT']?>images/envelope_small.png" width="14" height="10" border="0" /></a></td>
+    
+    <td><a href="?menu=orders&amp;author_id=33" onMouseOver="this.title='Отфильтровать заказы по автору';"><img src="<?=$_SESSION['SITE_ROOT']?>images/author2.gif" width="16" height="16" hspace="4" border="0" align="absmiddle" /></a><a href="?menu=messages&amp;action=compose&amp;mailto=author&amp;user_id=33" title="Отправить сообщение автору"><span title='srgg140201@yandex.ru'>srgg140...</span></a></td>
+    <td nowrap>27.06.2011 17:55:45</td>
+    <td><a href="#">Стартап.doc</a></td>
+    <td></td>
+    <td><a href="?menu=orders&amp;customer_id=3" title="Отфильтровать заказы по заказчику"><img src="<?=$_SESSION['SITE_ROOT']?>images/user_small.png" width="14" height="16" hspace="4" border="0" align="absmiddle"></a><a href="?menu=messages&amp;action=compose&amp;mailto=customer&amp;user_id=3" title="Отправить сообщение заказчику">astalavistas@gmail.com</a></td>
+    <td align="right">3750</td>
+    <td align="right"><a href="?menu=money&amp;order_id=32" title="Отфильтровать проводки по заказу">3800</a></td>
+    
+    <td align="center">3800</td>
+    <td align="center"><a href="?menu=mone&amp;action=add&amp;order_id=32" title="Добавить проводку по заказу id 32"><img src="<?=$_SESSION['SITE_ROOT']?>images/plus_big.png" width="16" height="16" border="0" align="absmiddle" /></a></td>
+  </tr>
+  <tr bgcolor="#F7F7F7" title="Заказ оплачен не полностью...">
+    
+    <td align="right"><a href="?menu=money&amp;order_id=29" title="Загрузить проводки по заказу">29</a></td>
+    <td align="center" class="padding0"><a href="?menu=messages&amp;action=compose&amp;order_id=29" title="Отправить сообщение по заказу..."><img src="<?=$_SESSION['SITE_ROOT']?>images/envelope_small.png" width="14" height="10" border="0" /></a>&nbsp;</td>
+    
+    <td class="padding0"><a href="?menu=money&amp;order_id=29" title="Загрузить проводки по заказу 29"><img src="<?=$_SESSION['SITE_ROOT']?>images/money_received.gif" width="21" height="15" border="0" align="absmiddle" /></a></td>
+    
+    <td align="right"><a href="?menu=orders&amp;work_id=2" title="Отфильтровать заказы по работе id 2">2</a></td>
+    
+    <td class="paddingRight0"><a href="?menu=messages&amp;mailto=autho&amp;action=compose&amp;work_id=2" title="Отправить сообщение автору работы"><img src="<?=$_SESSION['SITE_ROOT']?>images/envelope_small.png" width="14" height="10" border="0" /></a></td>
+    
+    <td><a href="?menu=orders&amp;author_id=33" onMouseOver="this.title='Отфильтровать заказы по автору';"><img src="<?=$_SESSION['SITE_ROOT']?>images/author2.gif" width="16" height="16" hspace="4" border="0" align="absmiddle" /></a><a href="?menu=messages&amp;action=compose&amp;mailto=author&amp;user_id=33" title="Отправить сообщение автору"><span title='srgg140201@yandex.ru'>srgg140...</span></a></td>
+    <td nowrap>27.06.2011 17:48:05</td>
+    <td><a href="#">ТЕХЗАДАНИЕ-проведение отбора молодежи.docx</a></td>
+    <td></td>
+    <td><a href="?menu=orders&amp;customer_id=3" title="Отфильтровать заказы по заказчику"><img src="<?=$_SESSION['SITE_ROOT']?>images/user_small.png" width="14" height="16" hspace="4" border="0" align="absmiddle"></a><a href="?menu=messages&amp;action=compose&amp;mailto=customer&amp;user_id=3" title="Отправить сообщение заказчику">astalavistas@gmail.com</a></td>
+    <td align="right">1250</td>
+    <td align="right"><a href="?menu=money&amp;order_id=29" title="Отфильтровать проводки по заказу">600</a></td>
+    
+    <td align="center">600</td>
+    <td align="center"><a href="?menu=mone&amp;action=add&amp;order_id=29" title="Добавить проводку по заказу id 29"><img src="<?=$_SESSION['SITE_ROOT']?>images/plus_big.png" width="16" height="16" border="0" align="absmiddle" /></a></td>
+  </tr>
+  <tr title="Заказ не оплачен">
+    
+    <td align="right"><a href="?menu=money&amp;order_id=28" title="Загрузить проводки по заказу">28</a></td>
+    <td align="center" class="padding0"><a href="?menu=messages&amp;action=compose&amp;order_id=28" title="Отправить сообщение по заказу..."><img src="<?=$_SESSION['SITE_ROOT']?>images/envelope_small.png" width="14" height="10" border="0" /></a>&nbsp;</td>
+    
+    <td class="padding0"><a href="?menu=money&amp;order_id=28" title="Загрузить проводки по заказу 28"><img src="<?=$_SESSION['SITE_ROOT']?>images/money_received.gif" width="21" height="15" border="0" align="absmiddle" /></a></td>
+    
+    <td align="right"><a href="?menu=orders&amp;work_id=9" title="Отфильтровать заказы по работе id 9">9</a></td>
+    
+    <td class="paddingRight0"><a href="?menu=messages&amp;mailto=autho&amp;action=compose&amp;work_id=9" title="Отправить сообщение автору работы"><img src="<?=$_SESSION['SITE_ROOT']?>images/envelope_small.png" width="14" height="10" border="0" /></a></td>
+    
+    <td><a href="?menu=orders&amp;author_id=33" onMouseOver="this.title='Отфильтровать заказы по автору';"><img src="<?=$_SESSION['SITE_ROOT']?>images/author2.gif" width="16" height="16" hspace="4" border="0" align="absmiddle" /></a><a href="?menu=messages&amp;action=compose&amp;mailto=author&amp;user_id=33" title="Отправить сообщение автору"><span title='srgg140201@yandex.ru'>srgg140...</span></a></td>
+    <td nowrap>26.06.2011 17:27:55</td>
+    <td><a href="#">ParalellUniverse.doc</a></td>
+    <td></td>
+    <td><a href="?menu=orders&amp;customer_id=2" title="Отфильтровать заказы по заказчику"><img src="<?=$_SESSION['SITE_ROOT']?>images/user_small.png" width="14" height="16" hspace="4" border="0" align="absmiddle"></a><a href="?menu=messages&amp;action=compose&amp;mailto=customer&amp;user_id=2" title="Отправить сообщение заказчику">dinato@mail.ru</a></td>
+    <td align="right">15625</td>
+    <td align="right"><a href="?menu=money&amp;order_id=28" title="Отфильтровать проводки по заказу">0</a></td>
+    
+    <td align="center">0</td>
+    <td align="center"><a href="?menu=mone&amp;action=add&amp;order_id=28" title="Добавить проводку по заказу id 28"><img src="<?=$_SESSION['SITE_ROOT']?>images/plus_big.png" width="16" height="16" border="0" align="absmiddle" /></a></td>
+  </tr>
+  <tr bgcolor="#F7F7F7" title="Заказ оплачен не полностью...">
+    
+    <td align="right"><a href="?menu=money&amp;order_id=27" title="Загрузить проводки по заказу">27</a></td>
+    <td align="center" class="padding0"><a href="?menu=messages&amp;action=compose&amp;order_id=27" title="Отправить сообщение по заказу..."><img src="<?=$_SESSION['SITE_ROOT']?>images/envelope_small.png" width="14" height="10" border="0" /></a>&nbsp;</td>
+    
+    <td class="padding0"><a href="?menu=money&amp;order_id=27" title="Загрузить проводки по заказу 27"><img src="<?=$_SESSION['SITE_ROOT']?>images/money_received.gif" width="21" height="15" border="0" align="absmiddle" /></a></td>
+    
+    <td align="right"><a href="?menu=orders&amp;work_id=2" title="Отфильтровать заказы по работе id 2">2</a></td>
+    
+    <td class="paddingRight0"><a href="?menu=messages&amp;mailto=autho&amp;action=compose&amp;work_id=2" title="Отправить сообщение автору работы"><img src="<?=$_SESSION['SITE_ROOT']?>images/envelope_small.png" width="14" height="10" border="0" /></a></td>
+    
+    <td><a href="?menu=orders&amp;author_id=33" onMouseOver="this.title='Отфильтровать заказы по автору';"><img src="<?=$_SESSION['SITE_ROOT']?>images/author2.gif" width="16" height="16" hspace="4" border="0" align="absmiddle" /></a><a href="?menu=messages&amp;action=compose&amp;mailto=author&amp;user_id=33" title="Отправить сообщение автору"><span title='srgg140201@yandex.ru'>srgg140...</span></a></td>
+    <td nowrap>26.06.2011 16:54:58</td>
+    <td><a href="#">ТЕХЗАДАНИЕ-проведение отбора молодежи.docx</a></td>
+    <td></td>
+    <td><a href="?menu=orders&amp;customer_id=2" title="Отфильтровать заказы по заказчику"><img src="<?=$_SESSION['SITE_ROOT']?>images/user_small.png" width="14" height="16" hspace="4" border="0" align="absmiddle"></a><a href="?menu=messages&amp;action=compose&amp;mailto=customer&amp;user_id=2" title="Отправить сообщение заказчику">dinato@mail.ru</a></td>
+    <td align="right">1250</td>
+    <td align="right"><a href="?menu=money&amp;order_id=27" title="Отфильтровать проводки по заказу">700</a></td>
+    
+    <td align="center">700</td>
+    <td align="center"><a href="?menu=mone&amp;action=add&amp;order_id=27" title="Добавить проводку по заказу id 27"><img src="<?=$_SESSION['SITE_ROOT']?>images/plus_big.png" width="16" height="16" border="0" align="absmiddle" /></a></td>
+  </tr>
+  <tr bgcolor="#FFFF99" title="Работа не отправлена...">
+    
+    <td align="right"><a href="?menu=money&amp;order_id=26" title="Загрузить проводки по заказу">26</a></td>
+    <td align="center" class="padding0"><a href="?menu=messages&amp;action=compose&amp;order_id=26" title="Отправить сообщение по заказу..."><img src="<?=$_SESSION['SITE_ROOT']?>images/envelope_small.png" width="14" height="10" border="0" /></a>&nbsp;</td>
+    
+    <td class="padding0"><a href="?menu=money&amp;order_id=26" title="Загрузить проводки по заказу 26"><img src="<?=$_SESSION['SITE_ROOT']?>images/money_received.gif" width="21" height="15" border="0" align="absmiddle" /></a></td>
+    
+    <td align="right"><a href="?menu=orders&amp;work_id=3" title="Отфильтровать заказы по работе id 3">3</a></td>
+    
+    <td class="paddingRight0"><a href="?menu=messages&amp;mailto=autho&amp;action=compose&amp;work_id=3" title="Отправить сообщение автору работы"><img src="<?=$_SESSION['SITE_ROOT']?>images/envelope_small.png" width="14" height="10" border="0" /></a></td>
+    
+    <td><a href="?menu=orders&amp;author_id=33" onMouseOver="this.title='Отфильтровать заказы по автору';"><img src="<?=$_SESSION['SITE_ROOT']?>images/author2.gif" width="16" height="16" hspace="4" border="0" align="absmiddle" /></a><a href="?menu=messages&amp;action=compose&amp;mailto=author&amp;user_id=33" title="Отправить сообщение автору"><span title='srgg140201@yandex.ru'>srgg140...</span></a></td>
+    <td nowrap>26.06.2011 16:53:28</td>
+    <td><a href="#">Ninok.doc</a></td>
+    <td></td>
+    <td><a href="?menu=orders&amp;customer_id=2" title="Отфильтровать заказы по заказчику"><img src="<?=$_SESSION['SITE_ROOT']?>images/user_small.png" width="14" height="16" hspace="4" border="0" align="absmiddle"></a><a href="?menu=messages&amp;action=compose&amp;mailto=customer&amp;user_id=2" title="Отправить сообщение заказчику">dinato@mail.ru</a></td>
+    <td align="right">125</td>
+    <td align="right"><a href="?menu=money&amp;order_id=26" title="Отфильтровать проводки по заказу">125</a></td>
+    
+    <td align="center">125</td>
+    <td align="center"><a href="?menu=mone&amp;action=add&amp;order_id=26" title="Добавить проводку по заказу id 26"><img src="<?=$_SESSION['SITE_ROOT']?>images/plus_big.png" width="16" height="16" border="0" align="absmiddle" /></a></td>
+  </tr>
+  <tr bgcolor="#FFFF99" title="Работа не отправлена...">
+    
+    <td align="right"><a href="?menu=money&amp;order_id=25" title="Загрузить проводки по заказу">25</a></td>
+    <td align="center" class="padding0"><a href="?menu=messages&amp;action=compose&amp;order_id=25" title="Отправить сообщение по заказу..."><img src="<?=$_SESSION['SITE_ROOT']?>images/envelope_small.png" width="14" height="10" border="0" /></a>&nbsp;</td>
+    
+    <td class="padding0"><a href="?menu=money&amp;order_id=25" title="Загрузить проводки по заказу 25"><img src="<?=$_SESSION['SITE_ROOT']?>images/money_received.gif" width="21" height="15" border="0" align="absmiddle" /></a></td>
+    
+    <td align="right"><a href="?menu=orders&amp;work_id=13" title="Отфильтровать заказы по работе id 13">13</a></td>
+    
+    <td class="paddingRight0"><a href="?menu=messages&amp;mailto=autho&amp;action=compose&amp;work_id=13" title="Отправить сообщение автору работы"><img src="<?=$_SESSION['SITE_ROOT']?>images/envelope_small.png" width="14" height="10" border="0" /></a></td>
+    
+    <td><a href="?menu=orders&amp;author_id=33" onMouseOver="this.title='Отфильтровать заказы по автору';"><img src="<?=$_SESSION['SITE_ROOT']?>images/author2.gif" width="16" height="16" hspace="4" border="0" align="absmiddle" /></a><a href="?menu=messages&amp;action=compose&amp;mailto=author&amp;user_id=33" title="Отправить сообщение автору"><span title='srgg140201@yandex.ru'>srgg140...</span></a></td>
+    <td nowrap>25.06.2011 08:36:26</td>
+    <td><a href="#">Счёт на оплату услуг.doc</a></td>
+    <td></td>
+    <td><a href="?menu=orders&amp;customer_id=1" title="Отфильтровать заказы по заказчику"><img src="<?=$_SESSION['SITE_ROOT']?>images/user_small.png" width="14" height="16" hspace="4" border="0" align="absmiddle"></a><a href="?menu=messages&amp;action=compose&amp;mailto=customer&amp;user_id=1" title="Отправить сообщение заказчику">serjo@mail.ru</a></td>
+    <td align="right">375</td>
+    <td align="right"><a href="?menu=money&amp;order_id=25" title="Отфильтровать проводки по заказу">375</a></td>
+    
+    <td align="center">375</td>
+    <td align="center"><a href="?menu=mone&amp;action=add&amp;order_id=25" title="Добавить проводку по заказу id 25"><img src="<?=$_SESSION['SITE_ROOT']?>images/plus_big.png" width="16" height="16" border="0" align="absmiddle" /></a></td>
+  </tr>
+  <tr bgcolor="#FFFF99" title="Работа не отправлена...">
+    
+    <td align="right"><a href="?menu=money&amp;order_id=24" title="Загрузить проводки по заказу">24</a></td>
+    <td align="center" class="padding0"><a href="?menu=messages&amp;action=compose&amp;order_id=24" title="Отправить сообщение по заказу..."><img src="<?=$_SESSION['SITE_ROOT']?>images/envelope_small.png" width="14" height="10" border="0" /></a>&nbsp;</td>
+    
+    <td class="padding0"><a href="?menu=money&amp;order_id=24" title="Загрузить проводки по заказу 24"><img src="<?=$_SESSION['SITE_ROOT']?>images/money_received.gif" width="21" height="15" border="0" align="absmiddle" /></a></td>
+    
+    <td align="right"><a href="?menu=orders&amp;work_id=7" title="Отфильтровать заказы по работе id 7">7</a></td>
+    
+    <td class="paddingRight0"><a href="?menu=messages&amp;mailto=autho&amp;action=compose&amp;work_id=7" title="Отправить сообщение автору работы"><img src="<?=$_SESSION['SITE_ROOT']?>images/envelope_small.png" width="14" height="10" border="0" /></a></td>
+    
+    <td><a href="?menu=orders&amp;author_id=33" onMouseOver="this.title='Отфильтровать заказы по автору';"><img src="<?=$_SESSION['SITE_ROOT']?>images/author2.gif" width="16" height="16" hspace="4" border="0" align="absmiddle" /></a><a href="?menu=messages&amp;action=compose&amp;mailto=author&amp;user_id=33" title="Отправить сообщение автору"><span title='srgg140201@yandex.ru'>srgg140...</span></a></td>
+    <td nowrap>25.06.2011 08:36:26</td>
+    <td><a href="#">Мировое соглашение.doc</a></td>
+    <td></td>
+    <td><a href="?menu=orders&amp;customer_id=1" title="Отфильтровать заказы по заказчику"><img src="<?=$_SESSION['SITE_ROOT']?>images/user_small.png" width="14" height="16" hspace="4" border="0" align="absmiddle"></a><a href="?menu=messages&amp;action=compose&amp;mailto=customer&amp;user_id=1" title="Отправить сообщение заказчику">serjo@mail.ru</a></td>
+    <td align="right">3500</td>
+    <td align="right"><a href="?menu=money&amp;order_id=24" title="Отфильтровать проводки по заказу">3550</a></td>
+    
+    <td align="center">3550</td>
+    <td align="center"><a href="?menu=mone&amp;action=add&amp;order_id=24" title="Добавить проводку по заказу id 24"><img src="<?=$_SESSION['SITE_ROOT']?>images/plus_big.png" width="16" height="16" border="0" align="absmiddle" /></a></td>
+  </tr>
+  <tr bgcolor="#F7F7F7" title="Заказ оплачен не полностью...">
+    
+    <td align="right"><a href="?menu=money&amp;order_id=23" title="Загрузить проводки по заказу">23</a></td>
+    <td align="center" class="padding0"><a href="?menu=messages&amp;action=compose&amp;order_id=23" title="Отправить сообщение по заказу..."><img src="<?=$_SESSION['SITE_ROOT']?>images/envelope_small.png" width="14" height="10" border="0" /></a>&nbsp;</td>
+    
+    <td class="padding0"><a href="?menu=money&amp;order_id=23" title="Загрузить проводки по заказу 23"><img src="<?=$_SESSION['SITE_ROOT']?>images/money_received.gif" width="21" height="15" border="0" align="absmiddle" /></a></td>
+    
+    <td align="right"><a href="?menu=orders&amp;work_id=6" title="Отфильтровать заказы по работе id 6">6</a></td>
+    
+    <td class="paddingRight0"><a href="?menu=messages&amp;mailto=autho&amp;action=compose&amp;work_id=6" title="Отправить сообщение автору работы"><img src="<?=$_SESSION['SITE_ROOT']?>images/envelope_small.png" width="14" height="10" border="0" /></a></td>
+    
+    <td><a href="?menu=orders&amp;author_id=33" onMouseOver="this.title='Отфильтровать заказы по автору';"><img src="<?=$_SESSION['SITE_ROOT']?>images/author2.gif" width="16" height="16" hspace="4" border="0" align="absmiddle" /></a><a href="?menu=messages&amp;action=compose&amp;mailto=author&amp;user_id=33" title="Отправить сообщение автору"><span title='srgg140201@yandex.ru'>srgg140...</span></a></td>
+    <td nowrap>25.06.2011 08:36:26</td>
+    <td><a href="#">Глава 32 - Дарение.doc</a></td>
+    <td></td>
+    <td><a href="?menu=orders&amp;customer_id=1" title="Отфильтровать заказы по заказчику"><img src="<?=$_SESSION['SITE_ROOT']?>images/user_small.png" width="14" height="16" hspace="4" border="0" align="absmiddle"></a><a href="?menu=messages&amp;action=compose&amp;mailto=customer&amp;user_id=1" title="Отправить сообщение заказчику">serjo@mail.ru</a></td>
+    <td align="right">5000</td>
+    <td align="right"><a href="?menu=money&amp;order_id=23" title="Отфильтровать проводки по заказу">4050</a></td>
+    
+    <td align="center">4050</td>
+    <td align="center"><a href="?menu=mone&amp;action=add&amp;order_id=23" title="Добавить проводку по заказу id 23"><img src="<?=$_SESSION['SITE_ROOT']?>images/plus_big.png" width="16" height="16" border="0" align="absmiddle" /></a></td>
+  </tr>
+  <tr bgcolor="#F7F7F7" title="Заказ оплачен не полностью...">
+    
+    <td align="right"><a href="?menu=money&amp;order_id=22" title="Загрузить проводки по заказу">22</a></td>
+    <td align="center" class="padding0"><a href="?menu=messages&amp;action=compose&amp;order_id=22" title="Отправить сообщение по заказу..."><img src="<?=$_SESSION['SITE_ROOT']?>images/envelope_small.png" width="14" height="10" border="0" /></a>&nbsp;</td>
+    
+    <td class="padding0"><a href="?menu=money&amp;order_id=22" title="Загрузить проводки по заказу 22"><img src="<?=$_SESSION['SITE_ROOT']?>images/money_received.gif" width="21" height="15" border="0" align="absmiddle" /></a></td>
+    
+    <td align="right"><a href="?menu=orders&amp;work_id=9" title="Отфильтровать заказы по работе id 9">9</a></td>
+    
+    <td class="paddingRight0"><a href="?menu=messages&amp;mailto=autho&amp;action=compose&amp;work_id=9" title="Отправить сообщение автору работы"><img src="<?=$_SESSION['SITE_ROOT']?>images/envelope_small.png" width="14" height="10" border="0" /></a></td>
+    
+    <td><a href="?menu=orders&amp;author_id=33" onMouseOver="this.title='Отфильтровать заказы по автору';"><img src="<?=$_SESSION['SITE_ROOT']?>images/author2.gif" width="16" height="16" hspace="4" border="0" align="absmiddle" /></a><a href="?menu=messages&amp;action=compose&amp;mailto=author&amp;user_id=33" title="Отправить сообщение автору"><span title='srgg140201@yandex.ru'>srgg140...</span></a></td>
+    <td nowrap>25.06.2011 08:36:26</td>
+    <td><a href="#">ParalellUniverse.doc</a></td>
+    <td></td>
+    <td><a href="?menu=orders&amp;customer_id=1" title="Отфильтровать заказы по заказчику"><img src="<?=$_SESSION['SITE_ROOT']?>images/user_small.png" width="14" height="16" hspace="4" border="0" align="absmiddle"></a><a href="?menu=messages&amp;action=compose&amp;mailto=customer&amp;user_id=1" title="Отправить сообщение заказчику">serjo@mail.ru</a></td>
+    <td align="right">15625</td>
+    <td align="right"><a href="?menu=money&amp;order_id=22" title="Отфильтровать проводки по заказу">12500</a></td>
+    
+    <td align="center"><span class="txtRed">0</span></td>
+    <td align="center"><a href="?menu=mone&amp;action=add&amp;order_id=22" title="Добавить проводку по заказу id 22"><img src="<?=$_SESSION['SITE_ROOT']?>images/plus_big.png" width="16" height="16" border="0" align="absmiddle" /></a></td>
+  </tr>
+  <tr bgcolor="#FFFF99" title="Работа не отправлена...">
+    
+    <td align="right"><a href="?menu=money&amp;order_id=21" title="Загрузить проводки по заказу">21</a></td>
+    <td align="center" class="padding0"><a href="?menu=messages&amp;action=compose&amp;order_id=21" title="Отправить сообщение по заказу..."><img src="<?=$_SESSION['SITE_ROOT']?>images/envelope_small.png" width="14" height="10" border="0" /></a>&nbsp;</td>
+    
+    <td class="padding0"><a href="?menu=money&amp;order_id=21" title="Загрузить проводки по заказу 21"><img src="<?=$_SESSION['SITE_ROOT']?>images/money_received.gif" width="21" height="15" border="0" align="absmiddle" /></a></td>
+    
+    <td align="right"><a href="?menu=orders&amp;work_id=3" title="Отфильтровать заказы по работе id 3">3</a></td>
+    
+    <td class="paddingRight0"><a href="?menu=messages&amp;mailto=autho&amp;action=compose&amp;work_id=3" title="Отправить сообщение автору работы"><img src="<?=$_SESSION['SITE_ROOT']?>images/envelope_small.png" width="14" height="10" border="0" /></a></td>
+    
+    <td><a href="?menu=orders&amp;author_id=33" onMouseOver="this.title='Отфильтровать заказы по автору';"><img src="<?=$_SESSION['SITE_ROOT']?>images/author2.gif" width="16" height="16" hspace="4" border="0" align="absmiddle" /></a><a href="?menu=messages&amp;action=compose&amp;mailto=author&amp;user_id=33" title="Отправить сообщение автору"><span title='srgg140201@yandex.ru'>srgg140...</span></a></td>
+    <td nowrap>25.06.2011 08:36:26</td>
+    <td><a href="#">Ninok.doc</a></td>
+    <td></td>
+    <td><a href="?menu=orders&amp;customer_id=1" title="Отфильтровать заказы по заказчику"><img src="<?=$_SESSION['SITE_ROOT']?>images/user_small.png" width="14" height="16" hspace="4" border="0" align="absmiddle"></a><a href="?menu=messages&amp;action=compose&amp;mailto=customer&amp;user_id=1" title="Отправить сообщение заказчику">serjo@mail.ru</a></td>
+    <td align="right">125</td>
+    <td align="right"><a href="?menu=money&amp;order_id=21" title="Отфильтровать проводки по заказу">250</a></td>
+    
+    <td align="center">250</td>
+    <td align="center"><a href="?menu=mone&amp;action=add&amp;order_id=21" title="Добавить проводку по заказу id 21"><img src="<?=$_SESSION['SITE_ROOT']?>images/plus_big.png" width="16" height="16" border="0" align="absmiddle" /></a></td>
+  </tr>
+  <tr bgcolor="#FFFF99" title="Работа не отправлена...">
+    
+    <td align="right"><a href="?menu=money&amp;order_id=15" title="Загрузить проводки по заказу">15</a></td>
+    <td align="center" class="padding0"><a href="?menu=messages&amp;action=compose&amp;order_id=15" title="Отправить сообщение по заказу..."><img src="<?=$_SESSION['SITE_ROOT']?>images/envelope_small.png" width="14" height="10" border="0" /></a>&nbsp;</td>
+    
+    <td class="padding0"><a href="?menu=money&amp;order_id=15" title="Загрузить проводки по заказу 15"><img src="<?=$_SESSION['SITE_ROOT']?>images/money_received.gif" width="21" height="15" border="0" align="absmiddle" /></a></td>
+    
+    <td align="right"><a href="?menu=orders&amp;work_id=4" title="Отфильтровать заказы по работе id 4">4</a></td>
+    
+    <td class="paddingRight0"><a href="?menu=messages&amp;mailto=autho&amp;action=compose&amp;work_id=4" title="Отправить сообщение автору работы"><img src="<?=$_SESSION['SITE_ROOT']?>images/envelope_small.png" width="14" height="10" border="0" /></a></td>
+    
+    <td><a href="?menu=orders&amp;author_id=33" onMouseOver="this.title='Отфильтровать заказы по автору';"><img src="<?=$_SESSION['SITE_ROOT']?>images/author2.gif" width="16" height="16" hspace="4" border="0" align="absmiddle" /></a><a href="?menu=messages&amp;action=compose&amp;mailto=author&amp;user_id=33" title="Отправить сообщение автору"><span title='srgg140201@yandex.ru'>srgg140...</span></a></td>
+    <td nowrap>10.06.2011 18:27:11</td>
+    <td><a href="#">Стартап.doc</a></td>
+    <td></td>
+    <td><a href="?menu=orders&amp;customer_id=2" title="Отфильтровать заказы по заказчику"><img src="<?=$_SESSION['SITE_ROOT']?>images/user_small.png" width="14" height="16" hspace="4" border="0" align="absmiddle"></a><a href="?menu=messages&amp;action=compose&amp;mailto=customer&amp;user_id=2" title="Отправить сообщение заказчику">dinato@mail.ru</a></td>
+    <td align="right">3750</td>
+    <td align="right"><a href="?menu=money&amp;order_id=15" title="Отфильтровать проводки по заказу">4700</a></td>
+    
+    <td align="center">4700</td>
+    <td align="center"><a href="?menu=mone&amp;action=add&amp;order_id=15" title="Добавить проводку по заказу id 15"><img src="<?=$_SESSION['SITE_ROOT']?>images/plus_big.png" width="16" height="16" border="0" align="absmiddle" /></a></td>
+  </tr>
+</table>    
+	  </div>
+    </td>
+  </tr>
+</table>  
+</div></td>
+  </tr>
+</form>
+</table>
+</body>
+</html>

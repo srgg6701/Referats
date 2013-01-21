@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="showOnOpen" value="true" />
+	<infoitem key="notes" value="Почему статусы работ прописываются динамически?&#xD;-убрать лишние ссылки&#xD;&#xD;-Для чего столбец &quot;Стоимость&quot;? В крайнем случае, её можно выводить hint'ом" />
+	<infoitem key="status" value="needs attention" />
+</info>

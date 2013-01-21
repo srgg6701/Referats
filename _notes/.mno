@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="MM_Session1" value="S_USER_TYPE" />
+	<infoitem key="MM_Session_Count" value="10" />
+	<infoitem key="MM_Session2" value="S_USER_NAME" />
+	<infoitem key="MM_Session3" value="S_ADMIN_EMAIL" />
+	<infoitem key="MM_Session4" value="SITE_ROOT" />
+	<infoitem key="MM_Session5" value="S_USER_ID" />
+	<infoitem key="MM_Session6" value="S_FILTER_WORK_AFFILIATION" />
+	<infoitem key="MM_Session7" value="S_USER_STATUS" />
+	<infoitem key="MM_Session8" value="T_ROOT_REFERATS" />
+	<infoitem key="MM_Session9" value="S_ROOT_REFERATS" />
+	<infoitem key="MM_Session10" value="DOC_ROOT_DIPLOM" />
+</info>

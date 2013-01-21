@@ -1,0 +1,81 @@
+a:hover {color:#ffffff;background-color:#ffa933;text-decoration:none}
+body {margin:0}
+H1 {font-size:120%}
+H2 {font-size:100%}
+
+td {font-size:85%}
+ul {margin-top: 10px;margin-left: 16px;}
+.allarticles {
+	padding-top: 6px;
+}
+.alphaPassive { 
+	filter: Alpha(opacity=80); 
+}
+.arial {font-size:92%;}
+.arial, H1, H2, H3, H4, H5, H6 {font-family: Arial, Helvetica, sans-serif;}
+.arialEncrised {font-size: 110%;font-family: Arial, Helvetica, sans-serif;}
+tr.borderBottom4 td, td.borderBottom4 {border-bottom:4px solid;}
+
+.checkbox {padding:0px;margin:0px;width:14px;height:14px}
+.dotted-bottom {border-bottom-width: 1px;border-bottom-style: dotted;border-bottom-color: #000000;}
+.graphixHeader {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	padding-top: 41px;
+	padding-left: 13px;
+	letter-spacing: 0.01em;
+	background-image: url(../images/bg2.jpg);
+	margin-bottom: 0px;
+}
+.graphixHeader2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px; 
+	padding-top: 0px;
+	padding-bottom:0px;
+	padding-left: 13px;
+	letter-spacing: 0.01em;
+	background-image: url(../images/header_bg.gif);
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+.header6bottom {margin-bottom: 6px;font-weight: 200;}
+.header10pdTop {padding-top: 6px;font-family: Arial, Helvetica, sans-serif;}
+.header10bottom {
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+.hLink {color: #000000;text-decoration: none;}
+.hLink:hover {color: #000000;text-decoration: none;cursor:text;background-color:#ffffff}
+.leftOffset {
+	margin-left: 10px;
+	padding-left: 10px;
+}
+.myAccount {color: #FF0000;}
+.myAccount:hover {color: #FFFFFF;}
+.nodecorate {text-decoration:none; cursor:default; color:#FFFFFF;}
+.noLine {text-decoration: none;}
+.nv {display:none}
+
+.pTriangle {
+	list-style-image: url(../images/pointer_right.gif);
+}
+.red {color: #FF0000}
+.referatbank {	}
+.rightOffset {
+	margin-right: 10px;
+	padding-right: 10px;
+}
+.rightTD {background-color: whitesmoke;}
+.solidGray {border: 1px solid #999999;}
+.topDotted {border-top-width: 1px;border-top-style: dotted;border-top-color: #FFcc00;}
+.topPad6 {margin-top:6px}
+
+.txt {}
+
+.whiteTxt {color: #FFFFFF}
+
+/*.notr { display:none}*/
+.writer_portrait {
+	margin-left: 6px;
+	margin-top: 2px;
+}

@@ -1,0 +1,30 @@
+﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<p class="header6bottom"><b>Ваша заявка:</b> </p>
+<table width="100%" cellpadding="3"  cellspacing="1" bgcolor="#CC0000">
+  <tr>
+    <td colspan="2" background="../images/pyctos-bg-4.gif"><font size="+1"><?php echo($wname);?></font></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td align="right" nowrap bgcolor="#F5F5F5"><span class="header10bottom">Тип
+        работы&nbsp;<img src="../images/arrows/simple_black.gif" width="14" height="12" hspace="2" border="1" align="absmiddle"></span></td>
+    <td width="100%"><b><?php echo($wtip_s);?></b></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td align="right" nowrap bgcolor="#F5F5F5"><span class="header10bottom">Предмет&nbsp;<img src="../images/arrows/simple_black.gif" width="14" height="12" hspace="2" border="1" align="absmiddle"></span></td>
+    <td><b><?php echo($wpredm);?></b></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td align="right" nowrap bgcolor="#F5F5F5"><span class="header10bottom">Объём&nbsp;<img src="../images/arrows/simple_black.gif" width="14" height="12" hspace="2" border="1" align="absmiddle"></span></td>
+    <td><b><?php echo($wpages);?> листов</b></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td colspan="2" nowrap bgcolor="#F5F5F5"><span onClick="sh_content('tr_content');" style="text-decoration:underline; color:#0000FF; cursor:hand">Отобразить
+        содержание работы</span></td>
+  </tr>
+  <tr bgcolor="#F5F5F5" id="tr_content" style="display:none">
+    <td colspan="2" style="padding:10px"><b>Содержание работы:</b>
+        <hr size="1" noshade>
+        <?php echo($wannot); ?></td>
+  </tr>
+</table>
+<h2>Заявленная Вами сумма: <strong><?php echo($summ);?></strong> руб.              </h2>

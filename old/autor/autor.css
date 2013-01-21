@@ -1,0 +1,33 @@
+body  {
+	margin-top: 6px;font-size:75%;font-family:Arial, Helvetica, sans-serif
+}
+td {font-size:75%;font-family:Arial, Helvetica, sans-serif}
+h1, h2, h3, h4, h5, h6 {padding-bottom:0px;margin-bottom:0px;}.red {
+	color: #FF0000;
+}
+.green {
+	color: #009900;
+}
+.frBorder {
+	border: 1px solid #CCCCCC;
+}
+.bottomPad6 {margin-bottom:6px}
+.topPad6 {margin-top:6px}
+
+.outbox {
+	background-color: #ECEFFB;
+}
+.inbox {
+	background-color: #E8F8E7;
+}
+.checkbox {
+	margin: 0px;
+	padding: 0px;
+	border:none;
+	height: 14px;
+	width: 14px;
+}
+.solidGray {
+	border: 1px solid #999999;
+}
+.dLime {color:#00CC00; padding:6px 0px 6px 0px}

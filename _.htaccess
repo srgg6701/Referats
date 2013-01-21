@@ -1,0 +1,8 @@
+ErrorDocument 404 http://localhost/referats/
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^referats.info
+RewriteRule (.*) http://www.referats.info/$1 [R=301,L]
+Redirect 301 /articles/diplom.htm http://www.diplom.com.ru/kak-napisat-otlichnyj-diplom.php
+Redirect 301 /articles/referat.htm http://www.diplom.com.ru/kak-napisat-referat.php
+Redirect 301 /articles/bad_teacher.htm /?article=bad_teacher
+Redirect 301 /sansan http://www.referats.info/?mode=skachat-rabotu

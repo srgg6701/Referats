@@ -1,0 +1,240 @@
+ <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Аккаунт автора</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+<link href="../css/txt.css" rel="stylesheet" type="text/css">
+<link href="../css/padding.css" rel="stylesheet" type="text/css">
+<link href="../css/border.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../js.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../email_check.js"></script>
+<script type="text/javascript">
+
+counter=1;
+//counter1=0;
+
+function generateFilesFields() {
+	
+//количество полей для згрузки
+var files_count=document.getElementById('files_count').value;
+//выделенный тип работы:
+var typeSel=document.getElementById('work_type');
+var selTypeValue=typeSel.options[typeSel.selectedIndex].value; //alert(selTypeValue);
+//контейнер для генерации полей загрузки
+var container=document.getElementById('file_uploading');
+//
+var upl;
+//счётчики списков:
+//var wacount=0;
+//var wtcount=0;
+var tblStart="\n<table>\n  <tr>\n    <td>\n";
+var tblNextCell="    </td>\n    <td>\n";
+var tblNextCell99='    </td>\n    <td style="width:99%">\n';
+var tblFinish="\n    </td>\n  </tr>\n</table>";
+if (isNaN(files_count)) alert('Указанное вами значение для количества файлов не является числом!');
+else {  
+		i=0;
+		while (i<files_count) {
+			
+			//строка загрузки файлов
+			//СПИСОК типов работ:
+			//upl='<!--СФОРМИРОВАТЬ ПЕРВИЧНЫЙ СПИСОК:-->\n'+wlistHTML;
+			upl=' \n<!--СПИСОК ПРЕДМЕТОВ:-->\n'+tblStart+'<select name="work_area'+counter+'" id="work_area'+counter+'">\n';
+			upl+='<option value="0" selected>Все типы работ </option><option value="Диплом MBA">Диплом MBA</option><option value="Дипломная работа">Дипломная работа</option><option value="Диссертация">Диссертация</option><option value="Исследование">Исследование</option><option value="Контрольная работа">Контрольная работа</option><option value="Курсовая">Курсовая</option><option value="Лабораторная работа">Лабораторная работа</option><option value="Неизвестный">Неизвестный</option><option value="Опыт">Опыт</option><option value="Отработка">Отработка</option><option value="Преддипломная практика">Преддипломная практика</option><option value="Производственная практика">Производственная практика</option><option value="Прочее">Прочее</option><option value="Реферат">Реферат</option><option value="мегаЭкспл">мегаЭкспл</option><option value="Прочее">Прочее</option>';
+			upl+='</select>'+tblNextCell;
+			
+			//alert(upl);
+			//СПИСОК предметов:
+			upl+=' \n<!--СПИСОК ТИПОВ РАБОТ:-->\n<select style="background-color:#F7f7f7;" name="work_type'+counter+'" id="work_type'+counter+'">';
+			upl+='<option value=0 selected>Все предметы</option><option value="АСТРОЛОГИЯ">АСТРОЛОГИЯ</option>\n<option value="Банковское дело">Банковское дело</option>\n<option value="вирусология">вирусология</option>\n<option value="Государственное регулирование, Таможня, Налоги">Государственное регулирование, Таможня, Налоги</option>\n<option value="Другое: гуманитарные науки">Другое: гуманитарные науки</option>\n<option value="Журналистика, PR, Издательское дело">Журналистика, PR, Издательское дело</option>\n<option value="Законодательство и право">Законодательство и право</option>\n<option value="Искусство, Культура">Искусство, Культура</option>\n<option value="Квантовая механика">Квантовая механика</option>\n<option value="Литература, Зарубежная литература">Литература, Зарубежная литература</option>\n<option value="Маркетинг">Маркетинг</option>\n<option value="Математика">Математика</option>\n<option value="Машиностроение">Машиностроение</option>\n<option value="Медицина">Медицина</option>\n<option value="Менеджмент">Менеджмент</option>\n<option value="Охрана правопорядка">Охрана правопорядка</option>\n<option value="Охрана природы, Экология, Природопользование">Охрана природы, Экология, Природопользование</option>\n<option value="Педагогика">Педагогика</option>\n<option value="Пищевые продукты">Пищевые продукты</option>\n<option value="Политология, Геополитика">Политология, Геополитика</option>\n<option value="Предпринимательская деятельность">Предпринимательская деятельность</option>\n<option value="Прикольно новый">Прикольно новый</option>\n<option value="Промышленность и Производство">Промышленность и Производство</option>\n<option value="Психология, Общение, Человек">Психология, Общение, Человек</option>\n<option value="Радиоэлектроника">Радиоэлектроника</option>\n<option value="Религия">Религия</option>\n<option value="Садоводство">Садоводство</option>\n<option value="Сельское хозяйство">Сельское хозяйство</option>\n<option value="Социология">Социология</option>\n<option value="Страноведение">Страноведение</option>\n<option value="Строительная механика">Строительная механика</option>\n<option value="Теоретическая механика">Теоретическая механика</option>\n<option value="Физика">Физика</option>\n<option value="Физкультура и Спорт, Здоровье">Физкультура и Спорт, Здоровье</option>\n<option value="Философия">Философия</option>\n<option value="Химия">Химия</option>\n<option value="Экономика и Финансы">Экономика и Финансы</option>\n<option value="Экономическое право">Экономическое право</option>\n<option value="Экскурсии и туризм">Экскурсии и туризм</option>\n<option value="Электротехника">Электротехника</option>\n<option value="Эндокринология">Эндокринология</option>\n';
+			upl+='\n</select>'+tblNextCell99;
+			
+			/*<option value="0" selected>Все типы работ </option><option value="Диплом MBA">Диплом MBA</option><option value="Дипломная работа">Дипломная работа</option><option value="Диссертация">Диссертация</option><option value="Исследование">Исследование</option><option value="Контрольная работа">Контрольная работа</option><option value="Курсовая">Курсовая</option><option value="Лабораторная работа">Лабораторная работа</option><option value="Неизвестный">Неизвестный</option><option value="Опыт">Опыт</option><option value="Отработка">Отработка</option><option value="Преддипломная практика">Преддипломная практика</option><option value="Производственная практика">Производственная практика</option><option value="Прочее">Прочее</option><option value="Реферат">Реферат</option><option value="мегаЭкспл">мегаЭкспл</option><option value="Прочее">Прочее</option>\n*/
+			//дописываем ячейки для цен:
+			upl+='\n<input name="file_'+counter+'" type="file" style="width:99%">'+tblNextCell;
+			upl+=' \n<input name="wprice_'+counter+'" id="wprice_'+counter+'" type="text" size="3" title="Ваша цена работы" onkeyUp="calculatePrices(this,\'wprice_customer_'+counter+'\');">'+tblNextCell;
+			upl+=' \n<input name="wprice_customer_'+counter+'" id="wprice_customer_'+counter+'" type="text" size="3" title="Цена для заказчика" onkeyUp="calculatePrices(this,\'wprice_'+counter+'\');">'+tblNextCell;
+			//удалить сформиованную строку загрузки:
+			upl+=' \n<a href="#" \nonClick="parentNode.style.display=';
+			upl+="'none';parentNode.parentNode.parentNode.parentNode.parentNode.innerHTML='';return false;";
+			// удаляем узлы: td/tr/tbody/table/div
+			upl+='" title="Убрать"><img src="http://localhost/Referats/images/delete2.gif" align="absmiddle" hspace="4" border="0" /></a>'+tblFinish; 
+			//alert(upl);
+			//дописываем контент блока загрузки:
+			//container.insertAdjacentHTML("beforeEnd",upl); //	insertAdjacentHTML	РАБОТАЕТ ТОЛЬКО ПОД IE!!!
+			var newContainer=document.createElement("DIV");				
+			var newDiv=container.appendChild(newContainer);
+			newDiv.innerHTML=upl;
+			var selTypes=document.getElementById('work_area'+counter);
+			
+			//alert(selTypeValue);
+			
+			var inOptions='';
+			
+			for(j=0;j<selTypes.length;j++) {
+				
+				inOptions+='\n'+selTypes.options[j].value+' | | '+selTypeValue;
+				
+				if (selTypes.options[j].value==selTypeValue) {
+					//alert('BINGO!');
+					selTypes.options[j].selected=true;
+				}
+			}
+			//alert('\nДОБАВЛЕННЫЙ ТЕКСТ:\n'+newDiv.innerHTML+'\nСРАВНЕНИЕ: '+inOptions);
+			alert(inOptions);
+			i++;
+			counter++; //2
+		} 
+	  //alert('\nДОБАВЛЕННЫЙ КОНТЕНТ:\n'+container.innerHTML);
+	  document.getElementById('div_upl_button').style.display='block';
+	  counter1+=i;
+	}
+}
+
+//сугубо отладочная функция:
+function checkLists() {
+var bbr='';
+var lst=document.getElementById('file_uploading').getElementsByTagName('SELECT');
+	for (i=0;i<lst.length;i++) {
+		bbr+="<br>="+i+", "+lst.item(i).name;
+		//lst.insertAdjacentText("afterEnd",nm);
+	}
+document.write(bbr);
+//return false;
+}
+//рассчитать цены для заказчика и автора:
+function calculatePrices(active,impacted) {
+	
+	//average: 25% ($price_ratio=125)
+	
+	//если вводим значения в ячейку для цены автора:
+	if (active.id.indexOf("customer_")==-1) {
+		//400/100*125=500
+		document.getElementById(impacted).value=active.value/100*125;
+	}else{ //если для цены заказчика:
+		//
+		document.getElementById(impacted).value=active.value/125*100;
+	}
+}
+</script>
+<style>
+body { 
+	
+	padding:0; 
+	margin:0;
+}
+
+</style>
+</head>
+<body onLoad="if (document.getElementById('test_mode_info')) MM_dragLayer('test_mode_info','',0,0,0,0,true,false,-1,-1,-1,-1,false,false,0,'',false,'');">
+
+
+
+<form name="form1" method="post" class="padding0" enctype="multipart/form-data">
+<table width="100%" align="center" cellpadding="0" cellspacing="0">
+    
+  <tr class="borderBottom1 authorTblRowHeader" style="height:auto;">
+    <td width="100%" align="left" nowrap class="padding6 paddingTop10" id="authorMenu" style="border-bottom-color:#E5E5E5;">
+<span><a href="?menu=default">Менеджер</a></span>
+<span class="iborder autorMenuActive" style="padding-right: 6px !important;"><a href="?menu=worx">Работы/Заказы</a> &nbsp;<a class="txtRed"><img src="../images/flag_green1.gif" width="16" height="16" border="0">:5</a></span><a href="?menu=worx&amp;submenu=upload" title="Разместить аннотацию работы..."><img src="http://localhost/Referats/images/plus.png" width="16" height="16" border="0" align="absmiddle"></a>
+
+<span><a href="?menu=money">Расчёты</a></span>
+<span style="padding-right: 6px !important;"><a href="?menu=messages">Сообщения</a></span><a href="?menu=messages&amp;action=compose" title="Новое сообщение..."><img src="http://localhost/Referats/images/plus.png" width="16" height="16" border="0" align="absmiddle"></a>
+<span><a href="?menu=data">Данные</a></span>
+<span><a href="?menu=tools">Инструменты</a></span>
+<span><a href="?menu=faq">FAQ</a></span>
+<span><a href="?menu=author_agreement">Соглашение</a></span><span><a href="?menu=exit">Выход</a></span></td>
+    <td style="border-bottom-color:#E5E5E5;">&nbsp;</td>
+  </tr>
+
+  <tr height="100%">
+    <td colspan="2" valign="top" style="border-top:solid 1px #CCC;"><div class="padding8 paddingTop14">    
+<!--<h5>Загрузка файлов &nbsp;|&nbsp; <a href="?menu=worx">Обзор работ</a></h5>-->
+
+<table width="100%" cellpadding="10" cellspacing="0" class="iborder2 borderColorOrange">
+  <tr class="userMenu">
+    <td colspan="3"><h2 style="display:inline;"><img src="../images/exclame_warning.png" width="32" height="32" align="absmiddle" />ВНИМАНИЕ!</h2> &nbsp; [<a href="#" onClick="switchDisplay ('tbl_info');">свернуть/развернуть таблицу</a>]</td>
+
+  </tr>
+  <tr valign="top" id="tbl_info">
+    <td><h4>1. Быстрая подготовка аннотаций</h4>      Для <a href="?menu=tools&amp;point=howitworks">быстрой подготовки аннотаций</a>, пожалуйста, используйте нашу программу <strong>DocsReducer</strong>&#8482;, доступную для скачивания в разделе <strong><a href="?menu=tools">Инструменты</a></strong>.</td>
+    <td> <h4>2. Форматы загружаемых файлов
+    </h4>
+
+      <ul class="paddingBottom0">
+      <li>Вы можете загружать файлы только форматов <strong>.doc</strong>, <strong>.docx</strong> и <strong>.rtf</strong>.  Файлы всех других форматов вы сможете отправить непосредственному заказчику позднее, после внесения им оплаты за заказ.</li>
+      <li>Старайтесь не загружать сразу большой суммарный объём файлов, т.к. в случае медленной или прерывистой связи загрузка может прерваться</li>
+    </ul>    </td>
+
+    <td><h4>3. Проблемы при загрузке файлов
+    </h4>
+      <div class="paddingBottom10"><span class="txtRed">Если у вас возникают проблемы</span> с загрузкой файлов аннотаций, вы можете прислать их нам на <nobr><a href="mailto:sale@referats.info">sale@referats.info</a>,</nobr> и мы сделаем это за вас!</div>
+      В этом случае обязательно сообщите нам емэйл, указанный вами при регистрации. 
+    Программу для автоматической подготовки аннотаций вы можете скачать в разделе <a href="?menu=tools&amp;point=download">Инструменты.</a></td>
+  </tr>
+
+  <tr>
+    <td colspan="3" bgcolor="#FFFF99" class="txt100"></td>
+  </tr>
+  </table><br>
+  <h3><img src="../images/flag.gif" width="16" height="16" hspace="4" border="0" align="absmiddle" />Укажите пожалуйста, что вы будете загружать &#8212;</h3>
+<p class="txt130">
+  <input type="radio" name="volume" id="volume" value="full" onclick="document.getElementById('upload_content').style.display='block';" /> Файлы работ в полном объёме 
+  <input type="radio" name="volume" id="volume" value="annotation" onclick="document.getElementById('upload_content').style.display='block';" />
+Аннотации работ (ознакомительный вариант текста для заказчика)<img src="../images/info.png" width="17" height="17" hspace="4" align="absmiddle" title="Чтобы быстро подготовить аннотации ваших работ, используйте нашу программу DocsReducer&#8482;.
+Чтобы скачать программу, перейдите в раздел Инструменты->Скачать" onclick="alert(this.title);" /></p>
+
+<p>Обратите внимание, что в обоих случаях заказчик сможет получить полный вариант вашей работы только после её полной оплаты, о чём вы будете незамедлительно проинформированы.</p>
+<hr noshade />
+<div id="upload_content" style="display:;">
+  
+  <div class="paddingBottom6 paddingTop6">
+Вы можете загрузить одновременно несколько файлов (максимально допустимое количество зависит от скорости вашего соединения с Интернет).</div>
+<ol class="content">
+  <li>Тип загружаемых работ: <span id="file_upload">            
+    <select name="work_type" style="background-color:#FFFFCC;" id="work_type">
+	
+	<option value="0" selected>Все типы работ </option><option value="Диплом MBA">Диплом MBA</option><option value="Дипломная работа">Дипломная работа</option><option value="Диссертация">Диссертация</option><option value="Исследование">Исследование</option><option value="Контрольная работа">Контрольная работа</option><option value="Курсовая">Курсовая</option><option value="Лабораторная работа">Лабораторная работа</option><option value="Неизвестный">Неизвестный</option><option value="Опыт">Опыт</option><option value="Отработка">Отработка</option><option value="Преддипломная практика">Преддипломная практика</option><option value="Производственная практика">Производственная практика</option><option value="Прочее">Прочее</option><option value="Реферат">Реферат</option><option value="мегаЭкспл">мегаЭкспл</option><option value="Прочее">Прочее</option>    
+    </select>
+
+ </span></li>
+  <li class="paddingTop8">Количество загружаемых файлов: 
+    <input name="files_count" type="text" id="files_count" size="1" />
+    <!-- generateFilesFields() - в index.php-->
+<input onClick="generateFilesFields();" type="button" name="files_array" id="files_array" value="    OK     " /></li>
+</ol>
+<hr color="#FFFFFF" />
+
+<div id="file_uploading" class="iborder2 borderColorGray">
+<div class="paddingBottom6">
+	<table cellspacing="0" cellpadding="8" class="userMenu">
+	  <tr>
+
+	    <td valign="top"><strong><img src="../images/exclame_warning.png" width="32" height="32" /></strong></td>
+	    <td class="txt100 paddingLeft0"><strong>ВАЖНО:</strong>
+          <div class="txtRed t">Пожалуйста, удостоверьтесь, что ваши файлы имеют имена, соответствующие теме работы, т.к. в противном случае заказчик не сможет получить достоверного представления о её содержании!</div></td>
+	    </tr>
+	  </table>
+	</div>
+	<div class="padding8">Загружаемые файлы: &nbsp;
+
+    					<strong>
+						Тип работы, &nbsp;
+                        Предмет, &nbsp;
+                        Расположение, &nbsp;
+                        Ваша цена работы, &nbsp;
+                        Цена для заказчика</strong>.
+	</div>
+
+</div>
+<div id="div_upl_button" class="paddingTop6 paddingLeft8" style="display:"><input name="upload_all_files" type="submit" value="Загрузить!" onClick="return checkPriceInt('file_uploading','wprice_');"></div>    
+	
+  </div>
+    
+</div>
+</div></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>
