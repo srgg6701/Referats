@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<info>
-	<infoitem key="status" value="revision1" />
-	<infoitem key="notes" value="1. Назначить функцию чекбокусу &quot;клиенты&quot;&#xD;3. В столбце &quot;респондент&quot; прописывать ник, а не емэйл!&#xD;4. Разобраться со стстусами сообщений - все, только новые, неотвеченые&#xD;5. Разобраться с указателями &quot;предыдущие&quot;/&quot;следующие&quot; (? картинки вставлены)." />
-	<infoitem key="showOnOpen" value="true" />
-</info>

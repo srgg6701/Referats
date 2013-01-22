@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<info>
-	<infoitem key="status" value="revision2" />
-	<infoitem key="notes" value="1.Сразу после регистрации первой загружать страницу FAQ, возможно, с настройками.&#xD;2.По дефолту в основном фрейме:&#xD;p1:&#xD;Заявки&#xD;p3:&#xD;Если есть новые сообщения - загружать их, если нет - новые заявки, если нет новых заявок - все заявки." />
-	<infoitem key="showOnOpen" value="true" />
-</info>

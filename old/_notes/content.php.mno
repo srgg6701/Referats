@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<info>
-	<infoitem key="status" value="needs attention" />
-	<infoitem key="notes" value="Отсутствуют поля/данные:&#xD;1.Предмет&#xD;2.Объём работы&#xD;3.# icq&#xD;4.Имена чекбоксов типов работ в быстром поиске (диплом, реферат, курсовая, другое)" />
-	<infoitem key="showOnOpen" value="true" />
-</info>

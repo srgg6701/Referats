@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<info>
-	<infoitem key="status" value="needs attention" />
-	<infoitem key="notes" value="1. Запоминать статус сортировки для текущего IP (потом - заавторизованного юзера)&#xD;2. Фильтр типа работ ошибается. &quot;Прочее глючит&quot;" />
-	<infoitem key="showOnOpen" value="true" />
-</info>

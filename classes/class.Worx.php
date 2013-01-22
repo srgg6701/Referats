@@ -991,7 +991,7 @@ ORDER BY $_SESSION[S_SORT] ";
 														 	  $andOrdersIDsWithFiles //все заказы diplom_zakaz с файлами
 													   		); 
 				
-			}
+			}	
 			//если не собственные
 			if ($_SESSION['FILTER_WORX_AFFILIATION']!="own"||$show_all) {
 				//echo "<h5>extractWorksDataReferats</h5>";
@@ -1003,21 +1003,24 @@ ORDER BY $_SESSION[S_SORT] ";
 				############################################################
 				
 			}
-			
 			//объединяем массивы, с предварительной проверкой их существования
 			//ВНИМАНИЕ! Первый аргумент - массив объединяемых массивов
 			$arrAll=$Tools->arraysMergeAndUnify(array($arrAllDiplom,$arrAllReferats));
 			
+			if (isset($_GET['arrAll']))
+				var_dump('<h1>arrAll</h1><pre>',$arrAll,'</pre>'); die();	
+
 			//$test_arrays1=true;
 			if ($test_arrays1) {
-				
-				foreach($arrAllDiplom as $key=>$order_id) echo "<div>$key=>$order_id</div>";
+				foreach($arrAllDiplom as $key=>$order_id) 
+					echo "<div>$key=>$order_id</div>";
 				echo "<hr>";
-				foreach($arrAllReferats as $key=>$order_id)	echo "<div>$key=>$order_id</div>";
-				
+				foreach($arrAllReferats as $key=>$order_id)	
+					echo "<div>$key=>$order_id</div>";
 			}
 			//$test_arrays2=true;
-			if ($test_arrays2) foreach($arrAll as $key=>$order_id) echo "<div>$key=>$order_id</div>";
+			if ($test_arrays2) 
+				foreach($arrAll as $key=>$order_id) echo "<div>$key=>$order_id</div>";
 		} 
 
 		//$test_array=true;

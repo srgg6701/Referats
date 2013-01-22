@@ -125,8 +125,10 @@ if ($_REQUEST['show_wrong_ext']&&is_array($Worx->arrWrongExt)) {
                value="<?=$work_id?>"<?=$checked_disabled?>></td>
     <td><a href="<?=$go_index?>?mode=skachat-rabotu&amp;work_table=<?=$work_table?>&amp;work_id=<?=$work_id?>"><?
 					
-				if ($work_subject||$work_id) echo ($work_subject)? $work_subject:"id :".$work_id;
-				elseif (isset($_SESSION['TEST_MODE'])) echo "<div>work_table= $work_table, work_id= $work_id, work_subject= $work_subject, work_type= $work_type, work_area= $work_area</div>";
+				if ($work_subject||$work_id) 
+					echo ($work_subject)? $work_subject:"id :".$work_id;
+				elseif (isset($_SESSION['TEST_MODE'])) 
+					echo "<div>work_table= $work_table, work_id= $work_id, work_subject= $work_subject, work_type= $work_type, work_area= $work_area</div>";
 				
 				?></a></td>
     <td><?=$work_type?></td>

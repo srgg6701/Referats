@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<info>
-	<infoitem key="notes" value="1.Создать клиентскую директорию и переместить в &#xD;2.Разобраться с параметрами &quot;скрытого&quot; iframe. Относится ко всем содержащим его страницам" />
-	<infoitem key="status" value="revision1" />
-	<infoitem key="showOnOpen" value="true" />
-</info>

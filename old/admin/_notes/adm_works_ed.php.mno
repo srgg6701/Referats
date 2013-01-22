@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<info>
-	<infoitem key="status" value="needs attention" />
-	<infoitem key="notes" value="1.Что означает фон таблицы? Для чего он розовый и в каких случаях меняется?&#xD;2.Добавить процедуру изменения даты автоматического утверждения работы (&quot;Работа будет утверждена автоматически:&quot;)&#xD;3.Прописывать имя автора ссылкой&#xD;" />
-	<infoitem key="showOnOpen" value="true" />
-</info>

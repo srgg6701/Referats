@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<info>
-	<infoitem key="status" value="revision1" />
-	<infoitem key="notes" value="1.Определять статус кустомера&#xD;2.При отработке submit() говорит &quot;нет такой страницы&quot;, хотя запрос выполняется совершенно правильный.&#xD;&#xD;" />
-	<infoitem key="showOnOpen" value="true" />
-</info>

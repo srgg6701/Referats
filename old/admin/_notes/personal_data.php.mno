@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<info>
-	<infoitem key="status" value="Для программиста" />
-	<infoitem key="notes" value="Заккоментирована строка &quot;Учебное заведение&quot; (зачем автору учебное заведение?)" />
-	<infoitem key="showOnOpen" value="true" />
-</info>

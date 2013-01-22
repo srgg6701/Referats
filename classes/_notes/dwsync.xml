@@ -46,4 +46,6 @@
 <file name="class.Navigate.php" server="ftp.educationservice.ru/domains/referats.info/public_html/" local="129689648221968000" remote="129689648400000000" />
 <file name="class.Errors.php" server="ftp.educationservice.ru/domains/referats.info/public_html/" local="129772176077580000" remote="129772183800000000" />
 <file name="class.regUser.php" server="ftp.educationservice.ru/domains/referats.info/public_html/" local="129772184143360000" remote="129772183800000000" />
+<file name="class.Orders.php" server="ftp.referats-info.1gb.ru/http/" local="130032611395470000" remote="130032996600000000" />
+<file name="class.regUser.php" server="ftp.referats-info.1gb.ru/http/" local="130032611738380000" remote="130032996600000000" />
 </dwsync>

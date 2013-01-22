@@ -27,4 +27,10 @@
 <file name="temp.htm" server="ftp.educationservice.ru//domains/referats.info/public_html/" local="129672217760930000" remote="129672221400000000" />
 <file name="temp2.htm" server="ftp.educationservice.ru//domains/referats.info/public_html/" local="129672213830320000" remote="129672222000000000" />
 <file name="content_messages.php" server="ftp.educationservice.ru/domains/referats.info/public_html/" local="129814429028109997" remote="129814431600000000" />
+<file name="content_data.php" server="ftp.referats-info.1gb.ru/http/" local="130032608638480000" remote="130032996600000000" />
+<file name="content_messages.php" server="ftp.referats-info.1gb.ru/http/" local="130032611741550000" remote="130032996600000000" />
+<file name="content_money.php" server="ftp.referats-info.1gb.ru/http/" local="130032616754800000" remote="130032996600000000" />
+<file name="content_payouts.php" server="ftp.referats-info.1gb.ru/http/" local="130032616753800000" remote="130032996600000000" />
+<file name="content_worx.php" server="ftp.referats-info.1gb.ru/http/" local="130032616753450000" remote="130032996600000000" />
+<file name="index.php" server="ftp.referats-info.1gb.ru/http/" local="130032616752200000" remote="130032996600000000" />
 </dwsync>

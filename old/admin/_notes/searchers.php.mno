@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<info>
-	<infoitem key="status" value="needs attention" />
-	<infoitem key="notes" value="Добавить статистику по KM.ru" />
-	<infoitem key="showOnOpen" value="true" />
-</info>

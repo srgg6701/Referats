@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<info>
-	<infoitem key="notes" value="После размещения работы выдавать конфирм: &#xD;&#xD;&quot;Ваша работа id такой-то, тема такая-то успешно заявлена на размещение на нашей торговой площадке и будет рассмотрена администрацией проекта.&#xD;Если вы хотите добавить ещё одну работу, щёлкните кнопку 'ОК'&quot;.&#xD;&#xD;Если подтверждает - снова загружать ed_worx_ed, если нет - worx.php" />
-	<infoitem key="showOnOpen" value="true" />
-	<infoitem key="status" value="needs attention" />
-</info>
