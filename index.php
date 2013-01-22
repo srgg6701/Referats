@@ -544,7 +544,7 @@ if ($work_name) {
 }
 ?>Банк рефератов, курсовых, дипломных работ. Готовые работы, дипломы на заказ.">
 <meta name="keywords" content="банк рефератов, курсовая, диплом, реферат, курсовые, диплом на заказ, курсовая работа на тему, купить диплом, курсовая по, реферат на тему, менеджмент, право, экологии, экономике, политологии, финансы, педагогика, рефераты и курсовые, психология, коллекция рефератов, социология, дипломная, коллекция рефератов, диссертация, ОБЖ, география, иностранные языки, литература, социология, физика, химия, философия">
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
 <link href="css/border.css" rel="stylesheet" type="text/css">
 <link href="css/padding.css" rel="stylesheet" type="text/css">
 <link href="css/style.css" rel="stylesheet" type="text/css">

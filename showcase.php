@@ -160,8 +160,10 @@ if ($_REQUEST['show_wrong_ext']&&is_array($Worx->arrWrongExt)) {
     <td><a href="<?=$go_index?>?mode=skachat-rabotu&amp;work_table=<?=$arrAll[$i]['work_table']?>&amp;work_id=<?=$arrAll[$i]['work_id']?>"><?
 	
 		
-		if ($arrAll[$i]['work_subject']||$arrAll[$i]['work_id']) echo ($arrAll[$i]['work_subject'])? $arrAll[$i]['work_subject']:"id :".$arrAll[$i]['work_id'];
-		elseif (isset($_SESSION['TEST_MODE'])) echo "<div>work_table= ".$arrAll[$i]['work_table'].", work_id= ".$arrAll[$i]['work_id'].", work_subject= ".$arrAll[$i]['work_subject'].", work_type= ".$arrAll[$i]['work_type'].", work_area= ".$arrAll[$i]['work_area']."</div>";
+		if ($arrAll[$i]['work_subject']||$arrAll[$i]['work_id']) 
+			echo ($arrAll[$i]['work_subject'])? $arrAll[$i]['work_subject']:"id :".$arrAll[$i]['work_id'];
+		elseif (isset($_SESSION['TEST_MODE'])) 
+			echo "<div>work_table= ".$arrAll[$i]['work_table'].", work_id= ".$arrAll[$i]['work_id'].", work_subject= ".$arrAll[$i]['work_subject'].", work_type= ".$arrAll[$i]['work_type'].", work_area= ".$arrAll[$i]['work_area']."</div>";
 
 			
 			?></a></td>

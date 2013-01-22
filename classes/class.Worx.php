@@ -1007,9 +1007,11 @@ ORDER BY $_SESSION[S_SORT] ";
 			//ВНИМАНИЕ! Первый аргумент - массив объединяемых массивов
 			$arrAll=$Tools->arraysMergeAndUnify(array($arrAllDiplom,$arrAllReferats));
 			
-			if (isset($_GET['arrAll']))
-				var_dump('<h1>arrAll</h1><pre>',$arrAll,'</pre>'); die();	
-
+			if (isset($_GET['arrAll'])){
+				var_dump('<h1>arrAll</h1><pre>',$arrAll,'</pre>'); 
+				die();	
+			}
+			
 			//$test_arrays1=true;
 			if ($test_arrays1) {
 				foreach($arrAllDiplom as $key=>$order_id) 
